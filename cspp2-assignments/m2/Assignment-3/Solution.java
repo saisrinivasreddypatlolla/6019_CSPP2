@@ -25,9 +25,7 @@ public class Solution {
                 System.out.println(base+" "+exponent);
             base = base*1;
         }
-        else if(exponent == 0){
-            return 1;
-        }
+        else if(exponent == 0) return 1;
         if(flag == true)
             return -base;
         else

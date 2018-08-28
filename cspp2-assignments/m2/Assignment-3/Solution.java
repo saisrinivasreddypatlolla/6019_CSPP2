@@ -48,7 +48,7 @@ public final class Solution {
         } else if (exp == 0) {
             return 1;
         }
-        if (flag == true) {
+        if (flag) {
             return -number;
         } else {
             return number;

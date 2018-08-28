@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Class for quadratic equations.
  */
 public final class Solution {
-    /**
+    /**.
      * this class is for quadratic equation
      */
     private Solution() {

@@ -9,13 +9,13 @@ public class Solution {
         Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result = power(base,exponent);
+        long result = power(base, exponent);
         System.out.println(result);
     }
     static long power(int base, int exponent) {
         boolean flag = false;
         long number = 0;
-        if(base < 0) {
+        if (base < 0) {
             flag = true;
             base = Math.abs(base);
         }

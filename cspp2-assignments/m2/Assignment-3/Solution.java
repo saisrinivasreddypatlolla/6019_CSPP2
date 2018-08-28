@@ -24,8 +24,9 @@ public class Solution {
                 base *= power(base,exponent-1);
             base = base*1;
         }
-        else if(exponent == 0)
+        else if(exponent == 0){
             return 1;
+        }
         if(flag == true)
             return -base;
         else

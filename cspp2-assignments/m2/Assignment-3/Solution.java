@@ -3,7 +3,10 @@ import java.util.Scanner;
  * This program is used to print factorial of given input.
  */
 
-public class Solution {
+public final class Solution {
+    /**
+     * this class is for printing factorial og given input.
+     */
     private Solution() {
         /**.
          * this the constructor of class
@@ -29,26 +32,28 @@ public class Solution {
      *
      * @return     integer
      */
-    static long power(long base, int exponent) {
+    static long power(final long base,final int exponent) {
+        long number = base;
+        int exp = exponent;
         boolean flag = false;
-        if (base < 0) {
+        if (number < 0) {
             flag = true;
-            base = Math.abs(base);
+            number = Math.abs(number);
         }
-        if (exponent >= 1) {
-            if (exponent > 1) {
-                base *= power(base, exponent - 1);
+        if (exp >= 1) {
+            if (exp > 1) {
+                number *= power(number, exp - 1);
             }
-            base = base * 1;
+            number = number * 1;
         }
-        else if (exponent == 0) {
+        else if (exp == 0) {
             return 1;
         }
         if (flag == true) {
-            return -base;
+            return -number;
         }
         else {
-            return base;
+            return number;
         }
     }
     /*

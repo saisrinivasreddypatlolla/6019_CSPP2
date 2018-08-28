@@ -9,12 +9,12 @@ public class Solution {
 		Scanner s=new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        int result=power(base,exponent);
+        long result=power(base,exponent);
         System.out.println(result);
 	}
-	static int power(int base, int exponent){
+	static long power(int base, int exponent){
 		boolean flag = false;
-		int number = 0;
+		long number = 0;
 		if(base < 0){
 			flag = true;
 			base = Math.abs(base);
@@ -22,6 +22,7 @@ public class Solution {
 		if(exponent >= 1){
 			if(exponent > 1){
 				base *= power(base,exponent-1);
+				System.out.println(base);
 			}
 			base = base*1;
 		}

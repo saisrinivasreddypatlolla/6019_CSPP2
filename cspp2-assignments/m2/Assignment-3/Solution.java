@@ -22,6 +22,7 @@ public class Solution {
         if(exponent >= 1){
             if(exponent > 1)
                 base *= power(base,exponent-1);
+                System.out.println(base+" "+exponent);
             base = base*1;
         }
         else if(exponent == 0){

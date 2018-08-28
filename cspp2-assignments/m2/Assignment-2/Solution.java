@@ -1,9 +1,16 @@
 import java.util.Scanner;
-
+/**.
+ * Class for solution.
+ */
 public class Solution {
     /*
     Do not modify this main function.
     */
+    private Solution(){
+        /**.
+         * this the constructor of class
+         */
+    }
     /**.
      * main function
      *
@@ -16,7 +23,7 @@ public class Solution {
         int c = scan.nextInt();
         equation(a, b, c);
     }
-    /**
+    /**.
      * this evaluates the quadratic equation
      *
      * @param      a     { parameter_description }

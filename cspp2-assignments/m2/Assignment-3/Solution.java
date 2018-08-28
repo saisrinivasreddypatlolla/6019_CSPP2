@@ -25,11 +25,15 @@ public class Solution {
                 System.out.println(base + " " + exponent);
             base = base*1;
         }
-        else if (exponent == 0) return 1;
-        if (flag == true)
+        else if (exponent == 0){
+            return 1;
+        }
+        if (flag == true){
             return - base;
-        else
+        }
+        else{
             return base;
+        }
     }
     /*
     Need to write the power function and print the output.

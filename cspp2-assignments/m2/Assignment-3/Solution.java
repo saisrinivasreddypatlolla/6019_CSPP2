@@ -14,7 +14,7 @@ public class Solution {
     }
     static long power(final long base, final int exponent) {
         boolean flag = false;
-        long result = 0;
+        long result = 1;
         if (base < 0) {
             flag = true;
             result = Math.abs(base);

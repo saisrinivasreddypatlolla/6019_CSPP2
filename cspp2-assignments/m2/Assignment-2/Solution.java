@@ -12,7 +12,7 @@ public class Solution {
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
     }
-    static void rootsOfQuadraticEquation(int a, int b, int c) {
+    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         double root = Math.sqrt((b * b) - (4 * a * c));
         double numerator1 = -b + root;
         double numerator2 = -b - root;

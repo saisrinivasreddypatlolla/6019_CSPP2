@@ -17,7 +17,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         long base = s.nextInt();
         int exponent = s.nextInt();
@@ -32,7 +32,7 @@ public final class Solution {
      *
      * @return     integer
      */
-    static long power(final long base,final int exponent) {
+    static long power(final long base, final int exponent) {
         long number = base;
         int exp = exponent;
         boolean flag = false;

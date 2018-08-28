@@ -4,6 +4,11 @@ public class Solution {
     /*
     Do not modify this main function.
     */
+    /**.
+     * main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
@@ -11,6 +16,13 @@ public class Solution {
         int c = scan.nextInt();
         equation(a, b, c);
     }
+    /**
+     * this evaluates the quadratic equation
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     * @param      c     { parameter_description }
+     */
     public static void equation(final int a, final int b, final int c) {
         final int value = 4;
         double root = Math.sqrt((b * b) - (value * a * c));

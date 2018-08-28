@@ -45,14 +45,12 @@ public final class Solution {
                 number *= power(number, exp - 1);
             }
             number = number * 1;
-        }
-        else if (exp == 0) {
+        } else if (exp == 0) {
             return 1;
         }
         if (flag == true) {
             return -number;
-        }
-        else {
+        } else {
             return number;
         }
     }

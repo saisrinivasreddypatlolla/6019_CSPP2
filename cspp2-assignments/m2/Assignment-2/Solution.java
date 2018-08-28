@@ -9,9 +9,9 @@ public class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        equation(a, b, c);
     }
-    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    public static void equation(final int a, final int b, final int c) {
         final int value = 4;
         double root = Math.sqrt((b * b) - (value * a * c));
         double numerator1 = -b + root;

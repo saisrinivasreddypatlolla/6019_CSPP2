@@ -1,12 +1,12 @@
 import java.util.Scanner;
 /**.
- * Class for solution.
+ * Class for quadratic equations.
  */
-public class Solution {
-    /*
-    Do not modify this main function.
-    */
-    private Solution(){
+public final class Solution {
+    /**
+     * this class is for quadratic equation
+     */
+    private Solution() {
         /**.
          * this the constructor of class
          */

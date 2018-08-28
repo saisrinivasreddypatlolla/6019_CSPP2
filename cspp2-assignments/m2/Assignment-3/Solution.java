@@ -1,10 +1,19 @@
 import java.util.Scanner;
-import java.math.*;
+/**.
+ * This program is used to print factorial of given input.
+ */
 
 public class Solution {
-    /*
-    Do not modify this main function.
-    */
+    private Solution() {
+        /**.
+         * this the constructor of class
+         */
+    }
+    /**.
+     * main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         long base = s.nextInt();
@@ -12,6 +21,14 @@ public class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
+    /**.
+     * In this method we return factorial number.
+     *
+     * @param      base      The base
+     * @param      exponent  The exponent
+     *
+     * @return     integer
+     */
     static long power(long base, int exponent) {
         boolean flag = false;
         if (base < 0) {
@@ -38,3 +55,5 @@ public class Solution {
     Need to write the power function and print the output.
     */
 }
+
+

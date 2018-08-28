@@ -7,14 +7,13 @@ public class Solution {
     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int base = s.nextInt();
+        long base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
         System.out.println(result);
     }
-    static long power(int base, int exponent) {
+    static long power(long base, int exponent) {
         boolean flag = false;
-        long number = 0;
         if (base < 0) {
             flag = true;
             base = Math.abs(base);
@@ -22,7 +21,6 @@ public class Solution {
         if (exponent >= 1) {
             if (exponent > 1) {
                 base *= power(base, exponent - 1);
-                System.out.println(base + " " + exponent);
             }
             base = base * 1;
         }

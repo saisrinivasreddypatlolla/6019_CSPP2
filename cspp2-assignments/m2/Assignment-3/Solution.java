@@ -46,15 +46,9 @@ public final class Solution {
             }
             number = number * 1;
         }
-        else if (exp == 0) {
-            return 1;
-        }
-        if (flag == true) {
-            return -number;
-        }
-        else {
-            return number;
-        }
+        else if (exp == 0) {return 1;}
+        if (flag == true) {return -number;}
+        else {return number;}
     }
     /*
     Need to write the power function and print the output.

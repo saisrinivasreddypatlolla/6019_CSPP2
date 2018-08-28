@@ -21,7 +21,7 @@ public class Solution {
         }
         if (exponent >= 1) {
             if (exponent > 1) {
-                result *= power(result, exponent - 1);
+                result *= power(base, exponent - 1);
             }
             result = result * 1;
         }

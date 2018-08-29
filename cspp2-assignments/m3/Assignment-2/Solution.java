@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**.
      * { item_description }
      */
@@ -17,15 +17,15 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
-
-        Scanner s=new Scanner(System.in);      
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
-        for (int i = 1 ; i <= n ; i++) {
+        final int value = 10;
+        for (int i = 1; i <= n; i++) {
             int remainder = 0;
-            for (int j = i; j > 0; j = j/10) {
-                remainder = j % 10;;
+            for (int j = i; j > 0; j = j/value) {
+                remainder = j % value;
                 if (remainder == 7) {
                     count += 1;
                 }

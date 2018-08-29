@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Program for gcd values
  */
 public final class Solution {
+    /**.
+     * integer with 1 as value.
+     */
     private static int gcd = 1;
     /**.
      * class for printing gcd values
@@ -18,10 +21,8 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-
     public static void main(final String[] args) {
-
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         System.out.println(gcd(n1, n2));
@@ -52,6 +53,6 @@ public final class Solution {
         return gcd;
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
 }

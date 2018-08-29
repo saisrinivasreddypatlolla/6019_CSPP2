@@ -22,14 +22,15 @@ public final class Solution {
         int n = s.nextInt();
         int count = 0;
         final int value = 10;
+        final int number = 7;
         for (int i = 1; i <= n; i++) {
             int remainder = 0;
-            for (int j = i; j > 0; j = j/value) {
+            for (int j = i; j > 0; j = j / value) {
                 remainder = j % value;
-                if (remainder == 7) {
+                if (remainder == number) {
                     count += 1;
                 }
             }
-        }System.out.println(count);
+        } System.out.println(count);
     }
 }

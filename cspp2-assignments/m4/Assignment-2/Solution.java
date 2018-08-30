@@ -22,7 +22,8 @@ public final class Solution {
         int[][] matrix1 = matrix();
         int[][] matrix2 = matrix();
         int[][] sum = new int[matrix1.length][matrix1[0].length];
-        if ((matrix1.length == matrix2.length) && (matrix1[0].length == matrix2[0].length)) {
+        if ((matrix1.length == matrix2.length) 
+            && (matrix1[0].length == matrix2[0].length)) {
             for (row = 0; row < matrix1.length; row++) {
                 for (column = 0; column < matrix1[0].length; column++) {
                     sum[row][column] = matrix1[row][column] + matrix2[row][column];

@@ -11,7 +11,10 @@ public final class Solution {
          * private constructor.
          */
     }
-    static Scanner scan = new Scanner(System.in);
+    /**.
+     * Scanner class object scan.
+     */
+    static private Scanner scan = new Scanner(System.in);
     /**
      * main function to print additon of two matrices.
      *

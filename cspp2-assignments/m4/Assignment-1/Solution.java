@@ -23,7 +23,7 @@ public final class Solution {
         int n = Integer.parseInt(sc.nextLine());
         int[] arr = new int[n];
         int i = 0;
-        for (; i < n; i++){
+        for (; i < n; i++) {
             arr[i] = Integer.parseInt(sc.nextLine());
         }
         for (i = 0; i < n - 1; i++) {

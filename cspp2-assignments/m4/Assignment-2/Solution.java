@@ -11,6 +11,7 @@ public final class Solution {
          * private constructor.
          */
     }
+    static Scanner scan = new Scanner(System.in);
     /**
      * main function to print additon of two matrices.
      *
@@ -22,11 +23,12 @@ public final class Solution {
         int[][] matrix1 = matrix();
         int[][] matrix2 = matrix();
         int[][] sum = new int[matrix1.length][matrix1[0].length];
-        if ((matrix1.length == matrix2.length) 
-            && (matrix1[0].length == matrix2[0].length)) {
+        if ((matrix1.length == matrix2.length)
+                && (matrix1[0].length == matrix2[0].length)) {
             for (row = 0; row < matrix1.length; row++) {
                 for (column = 0; column < matrix1[0].length; column++) {
-                    sum[row][column] = matrix1[row][column] + matrix2[row][column];
+                    sum[row][column] = matrix1[row][column]
+                                       + matrix2[row][column];
                 }
             }
             for (row = 0; row < matrix1.length; row++) {
@@ -45,7 +47,6 @@ public final class Solution {
      * @return     matrix
      */
     public static int[][] matrix() {
-        Scanner scan = new Scanner(System.in);
         int rows = scan.nextInt();
         int columns = scan.nextInt();
         int[][] matrix = new int[rows][columns];

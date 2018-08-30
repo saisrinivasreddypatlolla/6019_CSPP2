@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**.
  * This program is to print additon of two matrices.
  */
@@ -14,7 +14,7 @@ public final class Solution {
     /**.
      * Scanner class object scan.
      */
-    static private Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
     /**
      * main function to print additon of two matrices.
      *

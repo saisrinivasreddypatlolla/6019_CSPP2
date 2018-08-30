@@ -6,7 +6,7 @@ public final class Solution {
     /**.
      * This class is to print additon of two matrices.
      */
-    private Solution(){
+    private Solution() {
         /**.
          * private constructor.
          */

@@ -1,5 +1,5 @@
 
-import java.util.*;
+import java.util.Scanner;
 /**.
  * This program is to convert binary to decimal.
  */

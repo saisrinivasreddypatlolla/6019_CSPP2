@@ -44,7 +44,7 @@ public final class Solution {
             int character = Integer.parseInt(reverseString.charAt(index) + "");
             sum += (character * ((int) Math.pow(2, reverseString.indexOf(
                                                     Integer.toString(
-                                                            character), index))));
+                                                        character), index))));
         }
         return sum;
     }

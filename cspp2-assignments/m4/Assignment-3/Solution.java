@@ -42,10 +42,8 @@ public final class Solution {
         }
         for (int index = 0; index < reverseString.length(); index++) {
             int character = Integer.parseInt(reverseString.charAt(index) + "");
-            sum += (character * ((int)Math.pow(2,
-                                               reverseString.indexOf
-                                               (Integer.toString(character),
-                                                index))));
+            sum += (character * ((int) Math.pow(2, reverseString.indexOf(Integer.toString(
+                                                    character), index))));
         }
         return sum;
     }

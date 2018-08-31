@@ -21,7 +21,7 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         // int lines = sc.nextInt();
         int lines = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i <= lines; i++) {
+        for (int i = 0; i < lines; i++) {
             String string = sc.nextLine();
             long res = binaryToDecimal(string);
             System.out.println(res);

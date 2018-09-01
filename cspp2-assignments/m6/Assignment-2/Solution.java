@@ -22,22 +22,21 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-        int[][] array = a;
-        int rows1 = rows;
-        int columns1 = columns;
+    static int[][] roundHundred(final int[][] array, final int rows, final int columns) {
+        final int multiple = 100;
         int value = 0;
-        for (int i = 0; i < rows1; i++) {
-            for (int j = 0; j < columns1; j++) {
-                if (array[i][j] % 100 >= 50) {
-                    value = array[i][j] / 100;
-                    if (array[i][j] / 100 >= 0) {
+        final int number = 50;
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
+                if (array[row][column] % multiple >= number) {
+                    value = array[row][column] / multiple;
+                    if (array[row][column] / multiple >= 0) {
                         value += 1;
                     }
-                    array[i][j] = value * 100;
+                    array[row][column] = value * multiple;
                 } else {
-                    value = array[i][j] / 100;
-                    array[i][j] = value * 100;
+                    value = array[row][column] / multiple;
+                    array[row][column] = value * multiple;
                 }
             }
         }

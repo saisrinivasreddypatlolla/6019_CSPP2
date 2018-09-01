@@ -16,13 +16,15 @@ final class Solution {
      * Function to round the
      * elements of a matrix to the nearest 100.
      *
-     * @param      a     Matrix of which the elements to be rounded
+     * @param      array     Matrix of which the elements to be rounded
      * @param      rows     Number of rows
      * @param      columns     Number of columns
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] array, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] array,
+                                final int rows,
+                                final int columns) {
         final int multiple = 100;
         int value = 0;
         final int number = 50;

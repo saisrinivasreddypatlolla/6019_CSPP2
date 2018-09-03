@@ -5,7 +5,7 @@ import java.util.Scanner;
 class InputValidator {
     /**.
      * This class is used to return boolean
-     * value to student class
+     * value to student class.
      */
     private final int length = 6;
     /**.
@@ -53,9 +53,10 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);
-        String input = s.next();
-        InputValidator i = new InputValidator(input);
-        System.out.println(i.validateData());
+        Scanner scan = new Scanner(System.in);
+        String input = scan.next();
+        InputValidator obj = new InputValidator(input);
+        System.out.println(obj.validateData());
     }
 }
+

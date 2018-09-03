@@ -27,9 +27,9 @@ class InputValidator {
     public boolean validateData() {
         if (value.length() >= length) {
             return true;
-        } else {
-            return false;
         }
+        return false;
+
     }
 }
 /**.

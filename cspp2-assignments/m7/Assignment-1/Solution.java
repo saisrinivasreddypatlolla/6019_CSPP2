@@ -31,17 +31,19 @@ class InputValidator {
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 	/**.
 	 * { item_description }
 	 */
 	private Solution() {
-		/**
+		/**.
 		 * { item_description }
 		 */
 	}
-	/**
-	 * { item_description }
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
 		Scanner s = new Scanner(System.in);

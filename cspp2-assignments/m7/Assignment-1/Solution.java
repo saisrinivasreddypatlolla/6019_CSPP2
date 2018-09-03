@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /**.
  * Class for input validator.
  */
@@ -6,7 +6,7 @@ class InputValidator {
 	/**.
 	 * { var_description }
 	 */
-	static String value;
+	private static String value;
 	/**.
 	 * Constructs the object.
 	 *
@@ -32,6 +32,17 @@ class InputValidator {
  * Class for solution.
  */
 public class Solution {
+	/**.
+	 * { item_description }
+	 */
+	private Solution() {
+		/**
+		 * { item_description }
+		 */
+	}
+	/**
+	 * { item_description }
+	 */
 	public static void main(String args[]) {
 		Scanner s = new Scanner(System.in);
 		String input = s.next();

@@ -6,8 +6,8 @@ class InputValidator {
     /**.
      * { var_description }
      */
-    final private int length = 6;
-    /**
+    final int length = 6;
+    /**.
      * { var_description }
      */
     private static String value;

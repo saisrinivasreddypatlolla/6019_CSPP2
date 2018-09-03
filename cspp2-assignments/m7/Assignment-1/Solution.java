@@ -4,11 +4,12 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**.
-     * { var_description }
+     * This class is used to return boolean
+     * value to student class
      */
     private final int length = 6;
     /**.
-     * { var_description }
+     * ths variable is to get the input value.
      */
     private static String value;
     /**.
@@ -20,9 +21,10 @@ class InputValidator {
         this.value = input;
     }
     /**.
-     * { function_description }
+     * this method checks the length and returns
+     * boolean values.
      *
-     * @return     { description_of_the_return_value }
+     * @return     return boolean value
      */
     public boolean validateData() {
         if (value.length() >= length) {
@@ -37,15 +39,16 @@ class InputValidator {
  */
 public final class Solution {
     /**.
-     * { item_description }
+     * This class to print the boolean value return
+     * from details class.
      */
     private Solution() {
         /**.
-         * { item_description }
+         * private constructor
          */
     }
     /**.
-     * { function_description }
+     * main method is to print boolean values.
      *
      * @param      args  The arguments
      */
@@ -54,7 +57,5 @@ public final class Solution {
         String input = s.next();
         InputValidator i = new InputValidator(input);
         System.out.println(i.validateData());
-
     }
-
 }

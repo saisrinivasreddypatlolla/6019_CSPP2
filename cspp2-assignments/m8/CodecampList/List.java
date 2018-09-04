@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.*;
 /**.
  * This program is to print list.
  */
@@ -88,7 +89,7 @@ public final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        final int temp = 10;
+        final int temp = 30;
         array = new int[temp];
         size = 0;
 
@@ -305,14 +306,42 @@ public final class List {
      */
     public String addAll(final int[] items) {
         int i, j;
-        for (i = size, j = 0; i < items.length; i++, j++) {
+        for (i = size, j = 0; j < items.length; i++, j++) {
             array[i] = items[j];
             size += 1;
-        } array[i] = items[j];
+        }
         String s = "[";
         for (i = 0; i < size - 1; i++) {
             s += array[i] + ",";
         } return s + array[i] + "]";
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (array[i] == item) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(final int index, final int item) {
+        for (int i = size; i >= index; i--) {
+            array[i + 1] = array[i];
+        } array[index] = item;
+        size += 1;
     }
     /**.
      * { function_description }
@@ -332,6 +361,11 @@ public final class List {
             // split the line using space
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
+            if (tokens[0] .equals("add")) {
+                if (tokens.length == 3) {
+                    tokens[0] = "add1";
+                }
+            }
             switch (tokens[0]) {
             case "add":
                 l.add(Integer.parseInt(tokens[1]));
@@ -361,14 +395,20 @@ public final class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
             case "addall":
-                final int value = 5;
+                final int value = tokens.length - 1;
                 int[] a = new int[value];
-                for (int i = 0; i < value - 1; i++) {
+                int i;
+                for (i = 0; i < value; i++) {
                     a[i] = Integer.parseInt(tokens[i + 1]);
                 }
                 System.out.println(l.addAll(a));
                 break;
+            case "add1":
+                l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+            case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
             default:
+                break;
             }
         }
     }

@@ -139,14 +139,23 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        for (int i = 0; i < array.length - 1; i++) {
-            if (i == index) {
-                int j;
-                size -= 1;
-                for (j = i; j < array.length - 1; j++) {
-                    array[j] = array[j + 1];
-                } array[j] = 0;
-            }
+        // for (int i = 0; i < array.length - 1; i++) {
+        //     if (i == index) {
+        //         int j;
+        //         size -= 1;
+        //         for (j = i; j < array.length - 1; j++) {
+        //             array[j] = array[j + 1];
+        //         } array[j] = 0;
+        //     }
+        // }
+        if (index <= size) {
+            int i;
+            for (i = index; i < size - 1; i++) {
+                array[i] = array[i + 1];
+            } array[i] = 0;
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
 
     }

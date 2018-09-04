@@ -175,7 +175,8 @@ public final class List {
         // Replace the code below to write the code for get
         if (index < size) {
             return array[index];
-        } return -1;
+        }
+        return -1;
     }
     /*
      * What happens when you print an object using println?

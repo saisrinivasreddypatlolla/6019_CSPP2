@@ -234,6 +234,17 @@ public class List {
             }
         } return -1;
     }
+    public String addAll(int[] items) {
+        int i,j;
+        for (i = size, j = 0; i < items.length; i++, j++) {
+            array[i] = items[j];
+            size += 1;
+        } array[i] = items[j];
+        String s = "[";
+        for (i = 0; i < size - 1; i++) {
+            s += array[i] + ",";
+        } return s + array[i] + "]";
+    }
 
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
@@ -276,6 +287,14 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+            case "addall":
+                int[] a = new int[5];
+                for (int i = 0;i<5-1;i++){
+                    a[i] = Integer.parseInt(tokens[i+1]);
+                }
+                System.out.println(l.addAll(a));
+                break;
+            default:
             }
         }
     }

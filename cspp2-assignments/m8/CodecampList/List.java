@@ -214,7 +214,7 @@ public final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < size ; i++ ) {
+        for (int i = 0; i < size; i++) {
             if (array[i] == item) {
                 return true;
             }
@@ -288,7 +288,7 @@ public final class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
             case "addall":
-            int value = 5;
+                final int value = 5;
                 int[] a = new int[value];
                 for (int i = 0; i < value - 1; i++) {
                     a[i] = Integer.parseInt(tokens[i + 1]);

@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.*;
 /**.
  * This program is to print list.
  */
@@ -362,7 +361,8 @@ public final class List {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             if (tokens[0] .equals("add")) {
-                if (tokens.length == 3) {
+                final int three = 3;
+                if (tokens.length == three) {
                     tokens[0] = "add1";
                 }
             }

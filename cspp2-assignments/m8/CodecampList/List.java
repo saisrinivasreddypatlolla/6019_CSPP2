@@ -140,10 +140,10 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         for (int i = 0; i < array.length - 1; i++) {
-            if (i == index) {
+            if (array[i] == index) {
                 int j;
                 size -= 1;
-                for (j = i - 1; j < array.length - 1; j++) {
+                for (j = i; j < array.length - 1; j++) {
                     array[j] = array[j + 1];
                 } array[j] = 0;
             }

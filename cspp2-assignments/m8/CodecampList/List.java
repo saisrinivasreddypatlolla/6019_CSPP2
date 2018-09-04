@@ -1,8 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public final class List {
+    /**.
+     * This program is to print list.
+     */
+
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -59,8 +62,17 @@ public final class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**.
+     * { var_description }
+     */
     private int[] array;
+    /**.
+     * { var_description }
+     */
     private static int size;
+    /**.
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -89,6 +101,11 @@ public final class List {
      *
      * The method returns void (nothing)
      */
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size < array.length) {
@@ -103,6 +120,11 @@ public final class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**.
+     * 
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -135,6 +157,11 @@ public final class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     */
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
      */
     public void remove(final int index) {
         // write the logic for remove here.
@@ -171,6 +198,13 @@ public final class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < size) {
@@ -198,6 +232,11 @@ public final class List {
      * not all the elements of the array.
      *
      */
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String s = "[";
@@ -213,6 +252,20 @@ public final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -227,6 +280,13 @@ public final class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**.
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < array.length; i++) {
@@ -235,6 +295,13 @@ public final class List {
             }
         } return -1;
     }
+    /**.
+     * Adds all.
+     *
+     * @param      items  The items
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String addAll(final int[] items) {
         int i, j;
         for (i = size, j = 0; i < items.length; i++, j++) {
@@ -246,7 +313,11 @@ public final class List {
             s += array[i] + ",";
         } return s + array[i] + "]";
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();

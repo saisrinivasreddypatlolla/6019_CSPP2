@@ -143,7 +143,7 @@ public class List {
             if (i == index) {
                 int j;
                 size -= 1;
-                for (j = i - 1; j < array.length - 1 ; j++ ) {
+                for (j = i - 1; j < array.length - 1; j++) {
                     array[j] = array[j + 1];
                 } array[j] = 0;
             }
@@ -170,7 +170,8 @@ public class List {
             }
         } catch (Exception e) {
             System.out.println(e);
-        } return -1;
+        }
+        return -1;
     }
 
     /*

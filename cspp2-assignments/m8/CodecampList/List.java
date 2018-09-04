@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class List {
+public final class List {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -89,7 +89,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size < array.length) {
             array[size] = item;
@@ -136,7 +136,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         // for (int i = 0; i < array.length - 1; i++) {
@@ -171,7 +171,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < size) {
             return array[index];
@@ -212,7 +212,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size ; i++ ) {
             if (array[i] == item) {
@@ -226,7 +226,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < array.length; i++) {
             if (array[i] == item) {
@@ -234,7 +234,7 @@ public class List {
             }
         } return -1;
     }
-    public String addAll(int[] items) {
+    public String addAll(final int[] items) {
         int i, j;
         for (i = size, j = 0; i < items.length; i++, j++) {
             array[i] = items[j];
@@ -246,7 +246,7 @@ public class List {
         } return s + array[i] + "]";
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -288,8 +288,9 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
             case "addall":
-                int[] a = new int[5];
-                for (int i = 0; i < 5 - 1; i++) {
+            int value = 5;
+                int[] a = new int[value];
+                for (int i = 0; i < value - 1; i++) {
                     a[i] = Integer.parseInt(tokens[i + 1]);
                 }
                 System.out.println(l.addAll(a));

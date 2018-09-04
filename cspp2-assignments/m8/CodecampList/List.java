@@ -196,10 +196,11 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        int[] list = new int[size];
-        for (int i = 0; i < size; i++) {
-            list[i] = array[i];
-        } return Arrays.toString(list);
+        String s = "[";
+        int i;
+        for (i = 0; i < size; i++) {
+            s += array[i] + ",";
+        } return s + array[i] + "]";
     }
 
     /*

@@ -1,5 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**.
+ * This program is to print list.
+ */
 
 public final class List {
     /**.
@@ -85,7 +88,8 @@ public final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        array = new int[10];
+        final int temp = 10;
+        array = new int[temp];
         size = 0;
 
     }

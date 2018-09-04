@@ -146,8 +146,6 @@ public class List {
 				for (j = i - 1; j < array.length - 1 ; j++ ) {
 					array[j] = array[j + 1];
 				} array[j] = 0;
-			} else{
-				System.out.println("Invalid Position Exception");
 			}
 		}
 

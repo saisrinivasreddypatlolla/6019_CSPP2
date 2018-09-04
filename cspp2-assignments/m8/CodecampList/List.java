@@ -173,16 +173,10 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        try {
-            if (index < size) {
-                return array[index];
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return -1;
+        if (index < size) {
+            return array[index];
+        } return -1;
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally

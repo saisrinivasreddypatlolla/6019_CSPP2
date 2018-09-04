@@ -235,7 +235,7 @@ public class List {
         } return -1;
     }
     public String addAll(int[] items) {
-        int i,j;
+        int i, j;
         for (i = size, j = 0; i < items.length; i++, j++) {
             array[i] = items[j];
             size += 1;
@@ -289,8 +289,8 @@ public class List {
                 break;
             case "addall":
                 int[] a = new int[5];
-                for (int i = 0;i<5-1;i++){
-                    a[i] = Integer.parseInt(tokens[i+1]);
+                for (int i = 0; i < 5 - 1; i++) {
+                    a[i] = Integer.parseInt(tokens[i + 1]);
                 }
                 System.out.println(l.addAll(a));
                 break;

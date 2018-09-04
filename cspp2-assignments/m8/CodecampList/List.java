@@ -140,7 +140,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] == index) {
+            if (i == index) {
                 int j;
                 size -= 1;
                 for (j = i; j < array.length - 1; j++) {

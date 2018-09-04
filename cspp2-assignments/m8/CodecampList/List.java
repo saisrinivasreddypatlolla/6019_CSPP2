@@ -122,19 +122,16 @@ public final class List {
      * The method returns an int. Empty list should return 0.
      */
     /**.
-     * 
+     *
      *
      * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
-        try {
-            if (size > 0) {
-                return size;
-            }
-        } catch (Exception e) {
-            System.out.println(e);;
-        } return -1;
+        if (size > 0) {
+            return size;
+        }
+        return -1;
 
     }
 

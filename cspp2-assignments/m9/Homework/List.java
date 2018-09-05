@@ -159,7 +159,8 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). Resize should create an
+     * new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -167,7 +168,8 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming to
+     * answer these questions :-)
      *
      */
 
@@ -279,8 +281,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -433,8 +436,9 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     int temp[] = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++)
+                    for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
+                    }
                     l.addAll(temp);
                 }
                 break;
@@ -462,6 +466,8 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
+                    break;
             }
         }
     }

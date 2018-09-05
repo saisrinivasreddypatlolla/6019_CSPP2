@@ -40,7 +40,7 @@ public final class Fibonacci {
      */
     public static List fib(final int number) {
         // todo - complete this method
-        List list = new List();
+        List list = new List(number);
         int value1 = 0, value2 = 1, tempValue;
         list.add(value1);
         list.add(value2);

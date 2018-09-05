@@ -29,8 +29,7 @@ public final class Fibonacci {
     /**.
      * Constructs the object.
      */
-    private Fibonacci(){
-
+    private Fibonacci() {
     }
     /**.
      * Function to add fibonacci numbers to list

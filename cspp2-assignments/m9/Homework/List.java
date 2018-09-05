@@ -83,7 +83,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int number = 10;
+        list = new int[number];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -324,8 +325,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]){
                 return i;
+            }
         }
         return -1;
     }
@@ -334,7 +336,7 @@ public class List {
     /**.
      * { item_description }
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         // int i, j;
         // if (size == list.length) {
         //     resize();
@@ -424,8 +426,10 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1){
+                            l.add(Integer.parseInt(t[0]),
+                                  Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -435,7 +439,7 @@ public class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
+                    int[] temp = new int[t1.length];
                     for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
                     }
@@ -466,8 +470,8 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
-                default:
-                    break;
+            default:
+                break;
             }
         }
     }

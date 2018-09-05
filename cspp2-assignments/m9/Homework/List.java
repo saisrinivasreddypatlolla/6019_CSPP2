@@ -111,7 +111,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -132,7 +132,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
             resize();
@@ -214,7 +214,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -245,7 +245,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -303,7 +303,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -319,7 +319,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
@@ -331,7 +331,7 @@ public class List {
     /**.
      * { item_description }
      */
-    public void addAll(int items[]) {
+    public void addAll(final int items[]) {
         // int i, j;
         // if (size == list.length) {
         //     resize();
@@ -364,7 +364,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         if (index >= 0) {
             if (size == list.length) {
                 resize();
@@ -386,7 +386,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -401,7 +401,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 

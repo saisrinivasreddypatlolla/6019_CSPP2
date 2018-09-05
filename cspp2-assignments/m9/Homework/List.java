@@ -325,7 +325,7 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i]){
+            if (item == list[i]) {
                 return i;
             }
         }
@@ -334,7 +334,9 @@ public class List {
     /*Inserts all the elements of specified int
      array to the end of list*/
     /**.
-     * { item_description }
+     * Adds all.
+     *
+     * @param      items  The items
      */
     public void addAll(final int[] items) {
         // int i, j;
@@ -426,7 +428,7 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1){
+                        if (t.length > 1) {
                             l.add(Integer.parseInt(t[0]),
                                   Integer.parseInt(t[1]));
                         }

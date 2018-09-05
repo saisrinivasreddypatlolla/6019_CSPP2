@@ -207,12 +207,19 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index)throws Exception {
-        if (index < 0 || index >= size) {
-            throw new Exception("Negative Index Exception");
-        } else {
-            return list[index];
+    public int get(int index) {
+        int value=0;
+        try {
+            if (index < 0 || index >= size) {
+                value = -1;
+                throw new Exception("Negative Index Exception");
+            } else {
+                value = list[index];
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
+        return value;
     }
 
     /*
@@ -368,12 +375,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "get":
-                try{
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
-                }
-                catch(Exception e){
-                    System.out.println(e);
-                }
+                System.out.println(l.get(Integer.parseInt(tokens[1])));
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));

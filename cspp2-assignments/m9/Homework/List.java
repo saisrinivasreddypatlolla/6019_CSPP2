@@ -209,7 +209,6 @@ public class List {
      */
     public int get(int index) {
         if (index < 0 || index >= size) {
-            System.out.println("Negative Index Exception");
             return -1;
         } else {
             return list[index];
@@ -292,13 +291,18 @@ public class List {
            The method returns void (nothing)
         */
     public void add(int index, int item) {
-        if (size == list.length) {
-            resize();
+        if(index>=0){
+            if (size == list.length) {
+                resize();
+            }
+            for (int i = size; i >= index; i--) {
+                list[i + 1] = list[i];
+            } list[index] = item;
+            size += 1;
         }
-        for (int i = size; i >= index; i--) {
-            list[i + 1] = list[i];
-        } list[index] = item;
-        size += 1;
+        else{
+            System.out.println("Negative Index Exception");
+        }
     }
 
     /* Returns the count of occurances of a given item in the list*/

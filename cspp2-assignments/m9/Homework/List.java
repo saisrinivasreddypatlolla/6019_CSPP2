@@ -280,7 +280,7 @@ public class List {
         //     list[i] = items[j];
         //     size += 1;
         // }
-        for(int i =0;i<items.length;i++){
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -294,7 +294,7 @@ public class List {
            The method returns void (nothing)
         */
     public void add(int index, int item) {
-        if(index>=0){
+        if (index >= 0) {
             if (size == list.length) {
                 resize();
             }
@@ -302,8 +302,7 @@ public class List {
                 list[i + 1] = list[i];
             } list[index] = item;
             size += 1;
-        }
-        else{
+        } else {
             System.out.println("Negative Index Exception");
         }
     }

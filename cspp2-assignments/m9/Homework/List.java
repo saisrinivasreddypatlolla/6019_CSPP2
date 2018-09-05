@@ -207,9 +207,9 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(int index)throws Exception {
         if (index < 0 || index >= size) {
-            return -1;
+            throw new Exception("Negative Index Exception");
         } else {
             return list[index];
         }

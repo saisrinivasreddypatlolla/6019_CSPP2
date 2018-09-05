@@ -27,6 +27,12 @@ public class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     /**.
+     * Constructs the object.
+     */
+    private Fibonacci(){
+
+    }
+    /**.
      * Function to add fibonacci numbers to list
      *
      * @param      number  The number

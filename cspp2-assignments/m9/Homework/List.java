@@ -272,13 +272,16 @@ public class List {
     /*Inserts all the elements of specified int
      array to the end of list*/
     public void addAll(int items[]) {
-        int i, j;
-        if (size == list.length) {
-            resize();
-        }
-        for (i = size, j = 0; j < items.length; i++, j++) {
-            list[i] = items[j];
-            size += 1;
+        // int i, j;
+        // if (size == list.length) {
+        //     resize();
+        // }
+        // for (i = size, j = 0; j < items.length; i++, j++) {
+        //     list[i] = items[j];
+        //     size += 1;
+        // }
+        for(int i =0;i<items.length;i++){
+            add(items[i]);
         }
     }
     private int[] resize() {

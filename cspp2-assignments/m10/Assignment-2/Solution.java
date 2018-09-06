@@ -3,11 +3,11 @@ import java.util.Scanner;
 /**.
  * Class for perfoeming operations on string list.
  */
-public class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
 
     }
     /**.

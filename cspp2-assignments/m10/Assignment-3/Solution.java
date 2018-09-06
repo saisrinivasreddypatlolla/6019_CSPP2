@@ -69,12 +69,15 @@ public final class Solution {
     private Solution() {
 
     }
-    static Scanner stdin = new Scanner(new BufferedInputStream(
+    /**.
+     * { var_description }
+     */
+    private static Scanner stdin = new Scanner(new BufferedInputStream(
                                         System.in));
     /**.
      * { function_description }
      */
-    public static void StudentType() {
+    public static void studentType() {
         List<Student> listStudent = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -128,7 +131,7 @@ public final class Solution {
     /**.
      * { function_description }
      */
-    public static void FloatType() {
+    public static void floatType() {
         List<Float> listFloat = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -180,7 +183,7 @@ public final class Solution {
     /**.
      * { function_description }
      */
-    public static void DoubleType() {
+    public static void doubleType() {
         List<Double> listDouble = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -236,7 +239,7 @@ public final class Solution {
     /**.
      * { function_description }
      */
-    public static void CharacterType() {
+    public static void characterType() {
         List<Character> listCharacter = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -287,7 +290,7 @@ public final class Solution {
     /**.
      * { function_description }
      */
-    public static void IntegerType() {
+    public static void integerType() {
         List<Integer> listInteger = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -340,7 +343,7 @@ public final class Solution {
     /**.
      * { function_description }
      */
-    public static void StringType() {
+    public static void stringType() {
         List<String> listString = new List();
         while (stdin.hasNext()) {
             String line = stdin.nextLine();
@@ -393,22 +396,22 @@ public final class Solution {
         String objectType = stdin.nextLine();
         switch (objectType) {
         case "S":
-            StringType();
+            stringType();
             break;
         case "I":
-            IntegerType();
+            integerType();
             break;
         case "F":
-            FloatType();
+            floatType();
             break;
         case "C":
-            CharacterType();
+            characterType();
             break;
         case "D":
-            DoubleType();
+            doubleType();
             break;
         case "O":
-            StudentType();
+            studentType();
             break;
         default:
             break;

@@ -35,7 +35,8 @@ public class Solution {
 
 	public static void main(String[] args) {
 		// create an object of the list to invoke methods on it
-		Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+		Scanner stdin = new Scanner(new BufferedInputStream(
+		                                System.in));
 		String objectType = stdin.nextLine();
 
 		switch (objectType) {
@@ -72,17 +73,21 @@ public class Solution {
 					System.out.println(listString);
 					break;
 				case "remove":
-					listString.remove(Integer.parseInt(tokens[1]));
+					listString.remove(Integer.parseInt(
+					                      tokens[1]));
 					break;
 				case "indexOf":
-					System.out.println(listString.indexOf(tokens[1]));
+					System.out.println(listString.indexOf(
+					                       tokens[1]));
 					break;
 				case "get":
-					System.out.println(listString.get(Integer.parseInt(
-					                                      tokens[1])));
+					System.out.println(listString.get(
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
-					System.out.println(listString.contains(tokens[1]));
+					System.out.println(listString.contains(
+					                       tokens[1]));
 					break;
 				}
 			}
@@ -99,7 +104,8 @@ public class Solution {
 				//the corresponding method
 				switch (tokens[0]) {
 				case "add":
-					listInteger.add(Integer.parseInt(tokens[1]));
+					listInteger.add(Integer.parseInt(
+					                    tokens[1]));
 					break;
 				case "addAll":
 					if (tokens.length == 2) {
@@ -125,19 +131,23 @@ public class Solution {
 					System.out.println(listInteger);
 					break;
 				case "remove":
-					listInteger.remove(Integer.parseInt(tokens[1]));
+					listInteger.remove(Integer.parseInt(
+					                       tokens[1]));
 					break;
 				case "indexOf":
 					System.out.println(listInteger.indexOf(
-					                       Integer.parseInt((tokens[1]))));
+					                       Integer.parseInt((
+					                               tokens[1]))));
 					break;
 				case "get":
 					System.out.println(listInteger.get(
-					                       Integer.parseInt(tokens[1])));
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listInteger.contains(
-					                       Integer.parseInt((tokens[1]))));
+					                       Integer.parseInt((
+					                               tokens[1]))));
 					break;
 				}
 			}
@@ -180,19 +190,23 @@ public class Solution {
 					System.out.println(listFloat);
 					break;
 				case "remove":
-					listFloat.remove(Integer.parseInt(tokens[1]));
+					listFloat.remove(Integer.parseInt(
+					                     tokens[1]));
 					break;
 				case "indexOf":
 					System.out.println(listFloat.indexOf(
-					                       Float.parseFloat(tokens[1])));
+					                       Float.parseFloat(
+					                           tokens[1])));
 					break;
 				case "get":
 					System.out.println(listFloat.get(
-					                       Integer.parseInt(tokens[1])));
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listFloat.contains(
-					                       Float.parseFloat(tokens[1])));
+					                       Float.parseFloat(
+					                           tokens[1])));
 					break;
 				}
 			}
@@ -235,7 +249,8 @@ public class Solution {
 					System.out.println(listCharacter);
 					break;
 				case "remove":
-					listCharacter.remove(Integer.parseInt(tokens[1]));
+					listCharacter.remove(Integer.parseInt(
+					                         tokens[1]));
 					break;
 				case "indexOf":
 					System.out.println(listCharacter.indexOf(
@@ -243,7 +258,8 @@ public class Solution {
 					break;
 				case "get":
 					System.out.println(listCharacter.get(
-					                       Integer.parseInt(tokens[1])));
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listCharacter.contains(
@@ -264,7 +280,8 @@ public class Solution {
 				//invoke the corresponding method
 				switch (tokens[0]) {
 				case "add":
-					listDouble.add(Double.parseDouble(tokens[1]));
+					listDouble.add(Double.parseDouble(
+					                   tokens[1]));
 					break;
 				case "addAll":
 					if (tokens.length == 2) {
@@ -291,19 +308,23 @@ public class Solution {
 					System.out.println(listDouble);
 					break;
 				case "remove":
-					listDouble.remove(Integer.parseInt(tokens[1]));
+					listDouble.remove(Integer.parseInt(
+					                      tokens[1]));
 					break;
 				case "indexOf":
 					System.out.println(listDouble.indexOf(
-					                       Double.parseDouble(tokens[1])));
+					                       Double.parseDouble(
+					                           tokens[1])));
 					break;
 				case "get":
 					System.out.println(listDouble.get(
-					                       Integer.parseInt(tokens[1])));
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listDouble.contains(
-					                       Double.parseDouble(tokens[1])));
+					                       Double.parseDouble(
+					                           tokens[1])));
 					break;
 				}
 			}

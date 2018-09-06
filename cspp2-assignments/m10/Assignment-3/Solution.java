@@ -65,23 +65,17 @@ public class Solution {
      * @param      args  The arguments
      */
     public static void main(String[] args) {
-        // create an object of the list to invoke
-        //methods on it
+        
         Scanner stdin = new Scanner(new BufferedInputStream(
                                         System.in));
         String objectType = stdin.nextLine();
 
         switch (objectType) {
-        case "S"://This case will be executed for
-            //String type list
+        case "S":
             List<String> listString = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke
-                //the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listString.add(tokens[1]);
@@ -93,18 +87,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method andprintthelist size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listString.size());
                     break;
                 case "print":
-                    // print the list (implement toString
-                    // in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,
-                    // ...,item-n]
-                    // review the output testcase file
                     System.out.println(listString);
                     break;
                 case "remove":
@@ -130,16 +115,11 @@ public class Solution {
             }
             break;
 
-        case "I"://This case will be executed for Integer
-            //type list
+        case "I":
             List<Integer> listInteger = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke
-                //the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listInteger.add(Integer.parseInt(
@@ -156,18 +136,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print thelistsize
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listInteger.size());
                     break;
                 case "print":
-                    // print the list (implement toString
-                    // in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,
-                    // ...,item-n]
-                    // review the output testcase file
                     System.out.println(listInteger);
                     break;
                 case "remove":
@@ -195,16 +166,11 @@ public class Solution {
             }
             break;
 
-        case "F"://This case will be executed for Float
-            //type list
+        case "F":
             List<Float> listFloat = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke
-                //the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listFloat.add(Float.parseFloat(tokens[1]));
@@ -220,18 +186,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listFloat.size());
                     break;
                 case "print":
-                    // print the list (implement toString
-                    // in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,
-                    // ...,item-n]
-                    // review the output testcase file
                     System.out.println(listFloat);
                     break;
                 case "remove":
@@ -259,16 +216,11 @@ public class Solution {
             }
             break;
 
-        case "C"://This case will be executed for
-            //Character type list
+        case "C":
             List<Character> listCharacter = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke
-                //the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listCharacter.add(tokens[1].charAt(0));
@@ -285,18 +237,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listCharacter.size());
                     break;
                 case "print":
-                    // print the list (implement toString
-                    // in List class
-                    //for this to work)
-                    // expected format is [item-1,
-                    // item-2,...,item-n]
-                    // review the output testcase file
                     System.out.println(listCharacter);
                     break;
                 case "remove":
@@ -322,16 +265,11 @@ public class Solution {
             }
             break;
 
-        case "D"://This case will be executed for
-            //Double type list
+        case "D":
             List<Double> listDouble = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation
-                //invoke the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listDouble.add(Double.parseDouble(
@@ -348,17 +286,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listDouble.size());
                     break;
                 case "print":
-                    // print the list
-                    //(implement toString in StringList class
-                    //for this to work)
-                    // expected format is [item-1,item-2,...,item-n]
-                    // review the output testcase file
                     System.out.println(listDouble);
                     break;
                 case "remove":
@@ -389,16 +319,11 @@ public class Solution {
             }
             break;
 
-        case "O"://This case will be executed for Student
-            //type list i.e to store List of Student Objects
+        case "O":
             List<Student> listStudent = new List();
             while (stdin.hasNext()) {
-                // read the line
                 String line = stdin.nextLine();
-                // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke
-                //the corresponding method
                 switch (tokens[0]) {
                 case "add":
                     listStudent.add(new Student(tokens[1]));
@@ -416,19 +341,9 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and print the
-                    // list size
-                    // BTW, list size is not the array size
-                    // it is the number of items in the list
                     System.out.println(listStudent.size());
                     break;
                 case "print":
-                    // print the list (implement toString
-                    // in List class
-                    //for this to work)
-                    // expected format is [item-1,item-2,
-                    // ...,item-n]
-                    // review the output testcase file
                     System.out.println(listStudent);
                     break;
                 case "remove":

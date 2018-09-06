@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.lang.String;
 //A Class is implemented for Student details
 
 /**.
@@ -57,7 +58,7 @@ class Student {
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
@@ -69,7 +70,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner stdin = new Scanner(new BufferedInputStream(
                                         System.in));
         String objectType = stdin.nextLine();
@@ -179,7 +180,7 @@ public class Solution {
                 case "addAll":
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Float temp[] = new Float[t1.length];
+                        Float[] temp = new Float[t1.length];
                         for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }

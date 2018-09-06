@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**.
  * Class for student.
  */
-class Student{
+class Student {
     /**.
      * { var_description }
      */
@@ -73,7 +73,7 @@ public final class Solution {
      * stdun is used to take input.
      */
     private static Scanner stdin = new Scanner(new BufferedInputStream(
-                                        System.in));
+                System.in));
     /**.
      * this method perform student type values.
      */

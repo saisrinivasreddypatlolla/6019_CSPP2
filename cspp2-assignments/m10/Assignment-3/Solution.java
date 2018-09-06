@@ -313,17 +313,20 @@ public class Solution {
 					break;
 				case "indexOf":
 					System.out.println(listDouble.indexOf(
-					                       Double.parseDouble(
+					                       Double.
+					                       parseDouble(
 					                           tokens[1])));
 					break;
 				case "get":
 					System.out.println(listDouble.get(
-					                       Integer.parseInt(
+					                       Integer.
+					                       parseInt(
 					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listDouble.contains(
-					                       Double.parseDouble(
+					                       Double.
+					                       parseDouble(
 					                           tokens[1])));
 					break;
 				}
@@ -368,19 +371,23 @@ public class Solution {
 					System.out.println(listStudent);
 					break;
 				case "remove":
-					listStudent.remove(Integer.parseInt(tokens[1]));
+					listStudent.remove(Integer.parseInt(
+					                       tokens[1]));
 					break;
 				case "indexOf":
 					System.out.println(listStudent.indexOf(
-					                       new Student(tokens[1])));
+					                       new Student(
+					                           tokens[1])));
 					break;
 				case "get":
 					System.out.println(listStudent.get(
-					                       Integer.parseInt(tokens[1])));
+					                       Integer.parseInt(
+					                           tokens[1])));
 					break;
 				case "contains":
 					System.out.println(listStudent.contains(
-					                       new Student(tokens[1])));
+					                       new Student(
+					                           tokens[1])));
 					break;
 				}
 			}

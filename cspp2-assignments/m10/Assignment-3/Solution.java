@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.lang.String;
 //A Class is implemented for Student details
 
 /**.

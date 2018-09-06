@@ -70,12 +70,12 @@ public final class Solution {
 
     }
     /**.
-     * { var_description }
+     * stdun is used to take input.
      */
     private static Scanner stdin = new Scanner(new BufferedInputStream(
                                         System.in));
     /**.
-     * { function_description }
+     * this method perform student type values.
      */
     public static void studentType() {
         List<Student> listStudent = new List();
@@ -129,7 +129,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform float type values.
      */
     public static void floatType() {
         List<Float> listFloat = new List();
@@ -181,7 +181,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform double type values.
      */
     public static void doubleType() {
         List<Double> listDouble = new List();
@@ -237,7 +237,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform character type values.
      */
     public static void characterType() {
         List<Character> listCharacter = new List();
@@ -288,7 +288,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform integer type values.
      */
     public static void integerType() {
         List<Integer> listInteger = new List();
@@ -341,7 +341,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform string type values.
      */
     public static void stringType() {
         List<String> listString = new List();
@@ -387,7 +387,8 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform different operations with
+     * different of type values.
      *
      * @param      args  The arguments
      */

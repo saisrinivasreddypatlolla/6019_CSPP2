@@ -58,18 +58,21 @@ class Student {
  * Class for solution.
  */
 public class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
 
+    }
     /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(String[] args) {
-        
         Scanner stdin = new Scanner(new BufferedInputStream(
                                         System.in));
         String objectType = stdin.nextLine();
-
         switch (objectType) {
         case "S":
             List<String> listString = new List();
@@ -114,7 +117,6 @@ public class Solution {
                 }
             }
             break;
-
         case "I":
             List<Integer> listInteger = new List();
             while (stdin.hasNext()) {
@@ -165,7 +167,6 @@ public class Solution {
                 }
             }
             break;
-
         case "F":
             List<Float> listFloat = new List();
             while (stdin.hasNext()) {
@@ -215,7 +216,6 @@ public class Solution {
                 }
             }
             break;
-
         case "C":
             List<Character> listCharacter = new List();
             while (stdin.hasNext()) {
@@ -264,7 +264,6 @@ public class Solution {
                 }
             }
             break;
-
         case "D":
             List<Double> listDouble = new List();
             while (stdin.hasNext()) {
@@ -318,7 +317,6 @@ public class Solution {
                 }
             }
             break;
-
         case "O":
             List<Student> listStudent = new List();
             while (stdin.hasNext()) {

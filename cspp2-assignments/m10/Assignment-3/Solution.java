@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**.
  * Class for student.
  */
-class Student {
+class Student{
     /**.
      * { var_description }
      */

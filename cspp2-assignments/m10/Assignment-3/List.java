@@ -107,7 +107,7 @@ public class List<E> {
     public E get(int index) {
         Integer value = new Integer(-1);
         if (index < 0 || index >= size) {
-            return (E)value;
+            return (E)value;//return null;
         } else {
             return list[index];
         }

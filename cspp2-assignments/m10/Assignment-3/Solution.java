@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Class for student.
  */
 class Student {
-    /**
+    /**.
      * { var_description }
      */
     private String name;
@@ -45,15 +45,25 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
 }
-
+/**.
+ * Class for solution.
+ */
 public class Solution {
 
-
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke
         //methods on it
@@ -114,6 +124,8 @@ public class Solution {
                     System.out.println(listString.contains(
                                            tokens[1]));
                     break;
+                default:
+                    break;
                 }
             }
             break;
@@ -137,7 +149,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for (int i = 0; i < temp.length; i++ ) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         listInteger.addAll(temp);
@@ -177,6 +189,8 @@ public class Solution {
                                            Integer.parseInt((
                                                    tokens[1]))));
                     break;
+                default:
+                    break;
                 }
             }
             break;
@@ -199,7 +213,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float temp[] = new Float[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
@@ -239,6 +253,8 @@ public class Solution {
                                            Float.parseFloat(
                                                tokens[1])));
                     break;
+                default:
+                    break;
                 }
             }
             break;
@@ -262,7 +278,7 @@ public class Solution {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[
                             t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = t1[i].charAt(0);
                         }
                         listCharacter.addAll(temp);
@@ -300,6 +316,8 @@ public class Solution {
                     System.out.println(listCharacter.contains(
                                            tokens[1].charAt(0)));
                     break;
+                default:
+                    break;
                 }
             }
             break;
@@ -323,7 +341,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -364,6 +382,8 @@ public class Solution {
                                            Double.
                                            parseDouble(
                                                tokens[1])));
+                    break;
+                default:
                     break;
                 }
             }
@@ -429,6 +449,8 @@ public class Solution {
                     System.out.println(listStudent.contains(
                                            new Student(
                                                tokens[1])));
+                    break;
+                default:
                     break;
                 }
             }

@@ -17,7 +17,7 @@ public class Solution {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list operation invoke thecorrespondingmethod
 			switch (tokens[0]) {
 			case "add":
 				l.add(tokens[1]);
@@ -35,7 +35,7 @@ public class Solution {
 				System.out.println(l.size());
 				break;
 			case "print":
-				// print the list (implement toString in StringList class
+				// print the list (implement toString in StringListclass
 				//for this to work)
 				// expected format is [item-1,item-2,...,item-n]
 				// review the output testcase file
@@ -48,7 +48,8 @@ public class Solution {
 				System.out.println(l.indexOf(tokens[1]));
 				break;
 			case "get":
-				System.out.println(l.get(Integer.parseInt(tokens[1])));
+				System.out.println(l.get(Integer.parseInt(
+				                             tokens[1])));
 				break;
 			case "contains":
 				System.out.println(l.contains(tokens[1]));

@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * List of integers.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -78,7 +80,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int number = 10;
+        list = new int[number];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -432,7 +435,7 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     int[] temp = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++){
+                    for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
                     }
                     l.addAll(temp);

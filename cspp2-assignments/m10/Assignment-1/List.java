@@ -30,7 +30,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
     /**.
      * to store the integers in to the list.
      */
@@ -59,7 +58,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
     /**.
      * to check the size of list.
      */
@@ -150,11 +148,13 @@ public class List {
      * using java.lang.System.arraycopy(...);
      *
      * Option 2
-     * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
+     * Use java.util.Arrays.copyOf(...) methods which returns a
+     * bigger array,
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). Resize should create an
+     * new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -162,12 +162,12 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming to answer
+     * these questions :-)
      *
      */
 
     // todo create resize method
-    
     /**.
      * this function resizes the list to reduce overflow.
      *
@@ -284,8 +284,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -326,8 +327,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -338,7 +340,7 @@ public class List {
      *
      * @param      items  The index
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         int i, j;
         for (i = size, j = 0; j < items.length; i++, j++) {
             if (size == list.length) {
@@ -416,8 +418,10 @@ public class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1) {
+                            l.add(Integer.parseInt(t[0]),
+                                  Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -427,9 +431,10 @@ public class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++)
+                    int[] temp = new int[t1.length];
+                    for (int i = 0; i < temp.length; i++){
                         temp[i] = Integer.parseInt(t1[i]);
+                    }
                     l.addAll(temp);
                 }
                 break;
@@ -456,6 +461,8 @@ public class List {
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+            default:
                 break;
             }
         }

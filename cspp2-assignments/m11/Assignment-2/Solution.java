@@ -13,7 +13,7 @@ class Student {
     /**.
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      name1  The name
      */
     Student(final String name1) {
         this.name = name1;
@@ -34,7 +34,7 @@ class Student {
      * @return     { description_of_the_return_value }
      */
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -64,7 +64,17 @@ class Student {
  * Class for solution.
  */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution(){
 
+    }
+    /**
+     * { function_description }
+     *
+     * @param      stdin  The stdin
+     */
     public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
@@ -265,7 +275,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListFloat(Scanner stdin) {
+    public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line

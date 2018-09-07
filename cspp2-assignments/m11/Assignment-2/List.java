@@ -219,10 +219,8 @@ public class List<E> {
             return false;
         }
         for (int i = 0; i < size; i++) {
-            System.out.println(listdata.get(i)+" "+list[i]);
             if (listdata.get(i).equals(list[i])) {
                 count++;
-                System.out.println(count);
             }
         }
         if (count == size) {

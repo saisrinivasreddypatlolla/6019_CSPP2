@@ -218,9 +218,11 @@ public class List<E> {
         if (listdata.size() != size()) {
             return false;
         }
-        for (int i = 0; i < size; i++) {
-            if (listdata.get(i) == list[i]) {
-                count++;
+        for(E value2 : listdata.list){
+            for (int i = 0; i < size; i++) {
+                if (value2 == list[i]) {
+                    count++;
+                }
             }
         }
         if (count == size) {

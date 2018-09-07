@@ -219,9 +219,9 @@ public class List<E> {
             return false;
         }
         for(E value2:listdata.list){
-            E value1 = listdata.get(indexOf(value2));
+            // E value1 = listdata.get(indexOf(value2));
             for (int i = 0; i < size; i++) {
-                if (value1 == list[i]) {
+                if (value2 == list[i]) {
                     count++;
                 }
             }

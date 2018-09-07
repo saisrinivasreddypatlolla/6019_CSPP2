@@ -287,7 +287,7 @@ public class List {
 			System.out.println("Index Out of Bounds Exception");
 			return null;
 		} else {
-			for(int i=start;i<end;i++){
+			for (int i = start; i < end; i++) {
 				sublist.add(list[i]);
 			}
 		} return sublist;
@@ -298,7 +298,13 @@ public class List {
 	*/
 	public boolean equals(List newList ) {
 		// Replace the code below
-		if(newList.equals(list)){
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (contains(newList.list[i])) {
+				count++;
+			}
+		}
+		if (count == size - 1) {
 			return true;
 		} return false;
 	}
@@ -308,7 +314,7 @@ public class List {
 	* the simpler.
 	*/
 	public void clear() {
-		for(int i = 0; i<size;i++){
+		for (int i = 0; i < size; i++) {
 			remove(i);
 		}
 

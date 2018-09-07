@@ -269,7 +269,9 @@ public class List {
     */
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-            remove(indexOf(newArray[i]));
+            while (indexOf(newArray[i]) != -1) {
+                remove(indexOf(newArray[i]));
+            }
         }
 
     }
@@ -283,7 +285,13 @@ public class List {
     public List subList(int start, int end) {
         // write the logic for subList
         List sublist = new List();
-        if (start < 0 || end > size) {
+        if (start < 0 || end < 0) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else if (start == end && start >= size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         } else {
@@ -298,18 +306,19 @@ public class List {
     */
     public boolean equals(List newList ) {
         // Replace the code below
-        int count = 0;
-        if (newList.size() != size()) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            if (newList.get(i) == list[i]) {
-                count++;
-            }
-        }
-        if (count == size) {
-            return true;
-        } return false;
+        // int count = 0;
+        // if (newList.size() != size()) {
+        //     return false;
+        // }
+        // for (int i = 0; i < size; i++) {
+        //     if (newList.get(i) == list[i]) {
+        //         count++;
+        //     }
+        // }
+        // if (count == size) {
+        //     return true;
+        // } return false;
+        return this.toString().equals(newList.toString());
     }
     /*
     * Removes all the elements from list

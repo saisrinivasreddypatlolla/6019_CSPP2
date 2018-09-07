@@ -222,7 +222,6 @@ public class List<E> {
             for (int i = 0; i < size; i++) {
                 if ((listdata.get(indexOf(list[j]))).equals(list[i])) {
                     count++;
-                    System.out.println(count);
                 }
             }
         }

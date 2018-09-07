@@ -317,12 +317,13 @@ public class List {
     * the simpler.
     */
     public void clear() {
-        int[] tempList = list.clone();
-        for (int i : tempList) {
-            if (size != 0) {
-                remove(indexOf(i));
-            }
-        }
+        // int[] tempList = list.clone();
+        // for (int i : tempList) {
+        //     if (size != 0) {
+        //         remove(indexOf(i));
+        //     }
+        // }
+        size = 0;
 
     }
 

@@ -218,9 +218,9 @@ public class List<E> {
         if (listdata.size() != size()) {
             return false;
         }
-        for(int j = 0;j<listdata.list.length;j++){
+        for(int j = 0;j<listdata.size;j++){
             for (int i = 0; i < size; i++) {
-                if ((listdata.get(indexOf(list[j]))).equals(list[i])) {
+                if ((listdata.list[j]).equals(list[i])) {
                     count++;
                 }
             }

@@ -165,7 +165,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
 
     }
     /*
@@ -218,9 +218,12 @@ public class List<E> {
         if (listdata.size() != size()) {
             return false;
         }
-        for (int i = 0; i < size; i++) {
-            if (listdata.get(i) == list[i]) {
-                count++;
+        for(E value2:listdata.list){
+            E value1 = listdata.get(indexOf(value2));
+            for (int i = 0; i < size; i++) {
+                if (value1 == list[i]) {
+                    count++;
+                }
             }
         }
         if (count == size) {

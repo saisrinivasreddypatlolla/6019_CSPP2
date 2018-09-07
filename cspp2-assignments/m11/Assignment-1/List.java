@@ -334,7 +334,8 @@ public class List {
             for (int i = start; i < end; i++) {
                 sublist.add(list[i]);
             }
-        } return sublist;
+        }
+        return sublist;
     }
     /**.
      * { function_description }
@@ -447,8 +448,9 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;

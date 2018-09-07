@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**.
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -59,8 +61,17 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**.
+     * { var_description }
+     */
     private int[] list;
+    /**.
+     * { var_description }
+     */
     private int size;
+    /**.
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
@@ -95,6 +106,11 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length) {
@@ -172,6 +188,13 @@ public class List {
         list = Arrays.copyOf(list, 2 * list.length);
         return list;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
@@ -267,7 +290,12 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-    public void removeAll(int[] newArray) {
+    /**.
+     * Removes all.
+     *
+     * @param      newArray  The new array
+     */
+    public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             while (indexOf(newArray[i]) != -1) {
                 remove(indexOf(newArray[i]));
@@ -282,7 +310,15 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) {
+    /**.
+     * { function_description }
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public List subList(final int start, final int end) {
         // write the logic for subList
         List sublist = new List();
         if (start < 0 || end < 0) {
@@ -300,11 +336,14 @@ public class List {
             }
         } return sublist;
     }
-    /*
-    Returns a boolean indicating whether the parameter i.e a List object is
-    exactly matching with the given list or not.
-    */
-    public boolean equals(List newList ) {
+    /**.
+     * { function_description }
+     *
+     * @param      newList  The new list
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean equals(final List newList) {
         // Replace the code below
         // int count = 0;
         // if (newList.size() != size()) {
@@ -325,6 +364,9 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
+    /**.
+     * { function_description }
+     */
     public void clear() {
         // int[] tempList = list.clone();
         // for (int i : tempList) {
@@ -335,20 +377,24 @@ public class List {
         size = 0;
 
     }
-
-    public static void main(String[] args) {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
         // code to read the test cases input file
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        Scanner stdin = new Scanner(new
+                                    BufferedInputStream(System.in));
         // check if there is one more line to process
         while (stdin.hasNext()) {
             // read the line
             String line = stdin.nextLine();
             // split the line using space
             String[] tokens = line.split(" ");
-            // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "add":
                 if (tokens.length == 2) {
@@ -406,20 +452,22 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
-                if (tokens.length != 2) break;
+            case "subList":
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));

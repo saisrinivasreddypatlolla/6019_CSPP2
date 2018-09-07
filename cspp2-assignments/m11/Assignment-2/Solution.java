@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 class Student {
     /**.
-     * { var_description }
+     * name of the student.
      */
     private String name;
     /**.
@@ -71,7 +71,7 @@ public final class Solution {
 
     }
     /**.
-     * { function_description }
+     * this method perform integer type values.
      *
      * @param      stdin  The stdin
      */
@@ -171,7 +171,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform double type values.
      *
      * @param      stdin  The stdin
      */
@@ -271,7 +271,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform float type values
      *
      * @param      stdin  The stdin
      */
@@ -461,7 +461,7 @@ public final class Solution {
         }
     }
     /**.
-     * { function_description }
+     * this method perform student type values.
      *
      * @param      stdin  The stdin
      */

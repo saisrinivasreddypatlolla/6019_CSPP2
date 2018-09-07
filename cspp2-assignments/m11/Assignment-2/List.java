@@ -188,7 +188,7 @@ public class List<E> {
      * are contained in the specified int array.
      */
     public void removeAll(E[] items) {
-         for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             remove(indexOf(items[i]));
         }
     }
@@ -218,9 +218,12 @@ public class List<E> {
         if (listdata.size() != size()) {
             return false;
         }
-        for (int i = 0; i < size; i++) {
-            if (listdata.get(i).equals(list[i])) {
-                count++;
+        for(int j = 0;j<listdata.list.length;j++){
+            for (int i = 0; i < size; i++) {
+                if ((listdata.get(indexOf(list[j]))).equals(list[i])) {
+                    count++;
+                    System.out.println(count);
+                }
             }
         }
         if (count == size) {

@@ -18,7 +18,7 @@ class Set {
     /**.
      * Constructs the object.
      */
-    public Set() {
+    Set() {
         final int value = 10;
         set = new int[value];
         size = 0;
@@ -28,7 +28,7 @@ class Set {
      *
      * @param      capacity  The capacity
      */
-    public Set(final int capacity) {
+    Set(final int capacity) {
         set = new int[capacity];
         size = 0;
     }
@@ -107,7 +107,7 @@ class Set {
      * this function add similar values and
      * return the set class object
      *
-     * @param      setObject
+     * @param      setObject the object
      *
      * @return     returns object
      */

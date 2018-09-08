@@ -35,7 +35,7 @@ class Set {
 		}
 		String str = "{";
 		for (int i = 0; i < size - 1; i++) {
-			str += set[i] + ",";
+			str += set[i] + ", ";
 		}
 		return str + set[size - 1] + "}";
 	}
@@ -87,7 +87,6 @@ class Set {
 		int k = 0;
 		int[] temp;
 		int[][] newArray = new int[size * obj.size][2];
-		System.out.println(newArray.length);
 		while (k < newArray.length) {
 			for (int i = 0; i < size; i++) {
 				temp = new int[2];

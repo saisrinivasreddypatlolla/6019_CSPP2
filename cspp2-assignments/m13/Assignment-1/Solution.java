@@ -131,10 +131,11 @@ class Set {
     public Set retainAll(final int[] items) {
         Set s1 = new Set();
         for (int index = 0; index < size; index++) {
-            for (int j = 0; j < items.length; j++)
+            for (int j = 0; j < items.length; j++) {
                 if (set[index] == items[j]) {
                     s1.add(items[j]);
                 }
+            }
         }
         return s1;
     }
@@ -185,7 +186,7 @@ public final class Solution {
     /**
      * helper function to convert string input to int array.
      *
-     * @param      s     { string input from test case file }
+     * @param      str     { string input from test case file }
      *
      * @return     { int array from the given string }
      */

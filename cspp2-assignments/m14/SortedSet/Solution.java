@@ -10,11 +10,11 @@ class Set {
     /**.
      * variable for set.
      */
-    public int[] set;
+    private int[] set;
     /**.
      * variable for size of set
      */
-    public int size;
+    private int size;
     /**.
      * Constructs the object.
      */
@@ -209,6 +209,14 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
+
+    private int[] set;
+    private int size;
+    public SortedSet(){
+        set = new int[10];
+        size = 0;
+    }
+
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");

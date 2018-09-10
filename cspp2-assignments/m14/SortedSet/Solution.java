@@ -18,7 +18,7 @@ class Set {
     /**.
      * Constructs the object.
      */
-    Set() {
+    public Set() {
         final int value = 10;
         set = new int[value];
         size = 0;

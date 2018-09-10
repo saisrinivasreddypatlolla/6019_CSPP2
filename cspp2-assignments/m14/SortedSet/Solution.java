@@ -10,11 +10,11 @@ class Set {
     /**.
      * variable for set.
      */
-    private int[] set;
+    public int[] set;
     /**.
      * variable for size of set
      */
-    private int size;
+    public int size;
     /**.
      * Constructs the object.
      */
@@ -105,76 +105,7 @@ class Set {
         }
 
     }
-    public void last() {
-        if (size == 0) {
-            System.out.println("Set Empty Exception");
-        }
-        System.out.println(set[size - 1]);
-    }
-    public int[] subSet(int start, int end) {
-        if(start > end){
-            System.out.println("Invalid Arguments to Subset Exception");
-            return null;
-        }
-        int a = start(start);
-        System.out.println(a);
-        int b = end(end);
-        System.out.println(b);
-        // for (int i = 0; i < size; i++) {
-        //     if (start <= set[i]) {
-        //         System.out.println(a + " a " + i);
-        //         a = i;
-        //     }
-        //     if (end >= set[size - 1]) {
-        //         System.out.println(b + " b " + i);
-        //         b = i;
-        //     } else if (start > end) {
-        //         System.out.println("Invalid Arguments to Subset Exception");
-        //         return null;
-        //     }
-        // }
-        // if (start < set[0] && end > set[size - 1]) {
-        //     a = 0;
-        //     b = size - 1;
-        // } else if (start < set[0]) {
-        //     a = 0;
-        //     b = get(end);
-        // } else if (end > set[size - 1]) {
-        //     a = get(start);
-        //     b = set[size - 1];
-        // } else if (start > end) {
-        //     System.out.println("Invalid Arguments to Subset Exception");
-        // } else {
-        //     a = get(start);
-        //     b = get(end);
-        // }
-        int[] subSet = new int[b - a];
-        for (int i = a, j = 0; i < b; i++, j++) {
-            subSet[j] = set[i];
-        }
-        return subSet;
-    }
-    public void addAll(int[] items) {
-        for (int i = 0; i < items.length; i++) {
-            add(items[i]);
-        }
-    }
-    public int start(int start1){
-        for(int i =0;i<size;i++){
-            if(start1<=set[i]){
-                return i;
-            }
-        }
-        return -1;
-    }
-    public int end(int end1){
-        for(int i =size-1;i>=0;i++){
-            if(end1>=set[i]){
-                return i;
-            }
-        }
-        return -1;
-    }
+    
     /**.
      * this function add set of values to the set[].
      *
@@ -255,14 +186,6 @@ class Set {
         }
         return -1;
     }
-    public int[] headSet(int end) {
-        int a = get(end);
-        int[] temp = new int[a];
-        for (int i = 0; i < a; i++) {
-            temp[i] = set[i];
-        }
-        return temp;
-    }
     /**.
      * this function resize the array.
      */
@@ -270,6 +193,65 @@ class Set {
         set = Arrays.copyOf(set, 2 * size);
     }
 
+}
+class SortedSet extends Set{
+    public int last() {
+        if (size == 0) {
+            System.out.println("Set Empty Exception");
+            return -1;
+        }
+        return set[size - 1];
+    }
+    public int[] subSet(int start, int end) {
+        if (size == 0) {
+            int[] subSet = new int[0];
+            return subSet;
+        }
+        int a = start(start);
+        int b = end(end);
+        int[] subSet = new int[b - a];
+        int i, j;
+        for (i = a, j = 0; i < b; i++, j++) {
+            subSet[j] = set[i];
+        }
+        return subSet;
+    }
+    public void addAll(int[] items) {
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+        }
+    }
+    public int start(int start1) {
+        for (int i = 0; i < size; i++) {
+            if (start1 <= set[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int end(int end1) {
+        for (int i = size - 1; i >= 0; i--) {
+            if (end1 >= set[i]) {
+                if (end1 > set[i]) {
+                    return i + 1;
+                }
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int[] headSet(int end) {
+        int a = end(end);
+        if (a == -1) {
+            int[] temp = new int[0];
+            return temp;
+        }
+        int[] temp = new int[a];
+        for (int i = 0; i < a; i++) {
+            temp[i] = set[i];
+        }
+        return temp;
+    }
 }
 /**
  * Solution class for code-eval.
@@ -307,7 +289,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         // instantiate this set
-        Set s = new Set();
+        SortedSet s = new SortedSet();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new
                                     BufferedInputStream(System.in));
@@ -318,50 +300,6 @@ public final class Solution {
             // split the line using space
             String[] tokens = line.split(" ");
             switch (tokens[0]) {
-            case "size":
-                System.out.println(s.size());
-                break;
-            case "contains":
-                System.out.println(s.contains(
-                                       Integer.parseInt(tokens[1])));
-                break;
-            case "print":
-                System.out.println(s);
-                break;
-            case "add":
-                int[] intArray = intArray(tokens[1]);
-                if (intArray.length == 1) {
-                    s.add(intArray[0]);
-                } else {
-                    s.add(intArray);
-                }
-                break;
-            case "intersection":
-                s = new Set();
-                Set t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(s.intersection(t));
-                break;
-            case "retainAll":
-                s = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
-                break;
-            case "cartesianProduct":
-                s = new Set();
-                t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(Arrays.deepToString(
-                                       s.cartesianProduct(t)));
-                break;
             case "addAll":
                 String[] strArray = tokens[1].split(",");
                 int[] intArray1 = new int[strArray.length];
@@ -372,9 +310,17 @@ public final class Solution {
                 break;
             case "subSet":
                 String[] temp = tokens[1].split(",");
+                if (Integer.parseInt(temp[0]) > Integer.parseInt(temp[1])) {
+                    System.out.println("Invalid Arguments to Subset Exception");
+                    break;
+                }
                 int[] temp1 = s.subSet(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
                 String str = "{";
                 int i;
+                if (temp1.length == 0) {
+                    System.out.println("{}");
+                    break;
+                }
                 for (i = 0; i < temp1.length - 1; i++) {
                     str += temp1[i] + ", ";
                 }
@@ -385,6 +331,10 @@ public final class Solution {
                 int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
                 String str1 = "{";
                 int in;
+                if (temp2.length == 0) {
+                    System.out.println("{}");
+                    break;
+                }
                 for (in = 0; in < temp2.length - 1; in++) {
                     str1 += temp2[in] + ", ";
                 }
@@ -392,7 +342,7 @@ public final class Solution {
                 System.out.println(str1);
                 break;
             case "last":
-                s.last();
+                System.out.println(s.last());
                 break;
             default:
                 break;

@@ -204,18 +204,63 @@ class Set {
  * Class for sorted set.
  */
 class SortedSet extends Set {
-    /**
+    /**.
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
-
+    /**.
+     * { var_description }
+     */
     private int[] set;
+    /**.
+     * { var_description }
+     */
     private int size;
-    public SortedSet(){
+    /**.
+     * Constructs the object.
+     */
+    public SortedSet() {
         set = new int[10];
         size = 0;
     }
+    private void resize() {
+        set = Arrays.copyOf(set, 2 * size);
+    }
+    @Override
+    public void add(final int item) {
+        int flag = 0;
+        if (size == set.length) {
+            resize();
+        }
+        if (size >= 0) {
+            for (int index = 0; index < size; index++) {
+                if (item == set[index]) {
+                    flag = 1;
+                }
+            }
+            if (flag == 0) {
+                int i, j = 0, count = 0;
+                if (size > 0) {
+                    for (i = 0; i < size; i++) {
+                        if (item > set[i]) {
+                            count += 1;
+                        }
+                    }
+                    for (j = size; j > count; j--) {
+                        set[j] = set[j - 1];
+                    }
+                }
+                set[count] = item;
+                size++;
+            }
+        }
+    }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int last() {
         if (size == 0) {
@@ -418,7 +463,7 @@ public final class Solution {
                     break;
                 }
                 int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
-                    Integer.parseInt(temp[1]));
+                                       Integer.parseInt(temp[1]));
                 String str = "{";
                 int i;
                 if (temp1.length == 0) {

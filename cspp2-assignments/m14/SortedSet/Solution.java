@@ -220,13 +220,22 @@ class SortedSet extends Set {
     /**.
      * Constructs the object.
      */
-    public SortedSet() {
-        set = new int[10];
+    SortedSet() {
+        final int TEN = 10;
+        set = new int[TEN];
         size = 0;
     }
+    /**.
+     * { function_description }
+     */
     private void resize() {
         set = Arrays.copyOf(set, 2 * size);
     }
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     @Override
     public String toString() {
         if (size == 0) {
@@ -238,6 +247,11 @@ class SortedSet extends Set {
         }
         return str + set[size - 1] + "}";
     }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     @Override
     public void add(final int item) {
         int flag = 0;

@@ -228,6 +228,17 @@ class SortedSet extends Set {
         set = Arrays.copyOf(set, 2 * size);
     }
     @Override
+    public String toString() {
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        for (int index = 0; index < size - 1; index++) {
+            str += set[index] + ", ";
+        }
+        return str + set[size - 1] + "}";
+    }
+    @Override
     public void add(final int item) {
         int flag = 0;
         if (size == set.length) {

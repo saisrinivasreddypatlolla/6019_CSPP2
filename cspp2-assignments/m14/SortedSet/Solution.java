@@ -105,16 +105,50 @@ class Set {
         }
 
     }
-    public void last(){
-        if(size == 0){
+    public void last() {
+        if (size == 0) {
             System.out.println("Set Empty Exception");
         }
-        System.out.println(set[size-1]);
+        System.out.println(set[size - 1]);
     }
     public int[] subSet(int start, int end) {
-        int a = get(start);
-        int b = get(end);
-        int[] subSet = new int[b-a];
+        if(start > end){
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
+        }
+        int a = start(start);
+        System.out.println(a);
+        int b = end(end);
+        System.out.println(b);
+        // for (int i = 0; i < size; i++) {
+        //     if (start <= set[i]) {
+        //         System.out.println(a + " a " + i);
+        //         a = i;
+        //     }
+        //     if (end >= set[size - 1]) {
+        //         System.out.println(b + " b " + i);
+        //         b = i;
+        //     } else if (start > end) {
+        //         System.out.println("Invalid Arguments to Subset Exception");
+        //         return null;
+        //     }
+        // }
+        // if (start < set[0] && end > set[size - 1]) {
+        //     a = 0;
+        //     b = size - 1;
+        // } else if (start < set[0]) {
+        //     a = 0;
+        //     b = get(end);
+        // } else if (end > set[size - 1]) {
+        //     a = get(start);
+        //     b = set[size - 1];
+        // } else if (start > end) {
+        //     System.out.println("Invalid Arguments to Subset Exception");
+        // } else {
+        //     a = get(start);
+        //     b = get(end);
+        // }
+        int[] subSet = new int[b - a];
         for (int i = a, j = 0; i < b; i++, j++) {
             subSet[j] = set[i];
         }
@@ -124,6 +158,22 @@ class Set {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
+    }
+    public int start(int start1){
+        for(int i =0;i<size;i++){
+            if(start1<=set[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int end(int end1){
+        for(int i =size-1;i>=0;i++){
+            if(end1>=set[i]){
+                return i;
+            }
+        }
+        return -1;
     }
     /**.
      * this function add set of values to the set[].
@@ -197,18 +247,18 @@ class Set {
         }
         return newArray;
     }
-    public int get(int item){
-        for(int i=0;i<size;i++){
-            if(item == set[i]){
+    public int get(int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == set[i]) {
                 return i;
             }
         }
         return -1;
     }
-    public int[] headSet(int end){
+    public int[] headSet(int end) {
         int a = get(end);
         int[] temp = new int[a];
-        for(int i=0;i<a;i++){
+        for (int i = 0; i < a; i++) {
             temp[i] = set[i];
         }
         return temp;

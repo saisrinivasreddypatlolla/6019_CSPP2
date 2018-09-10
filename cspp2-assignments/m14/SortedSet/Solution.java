@@ -10,11 +10,11 @@ class Set {
     /**.
      * variable for set.
      */
-    protected int[] set;
+    public int[] set;
     /**.
      * variable for size of set
      */
-    protected int size;
+    public int size;
     /**.
      * Constructs the object.
      */

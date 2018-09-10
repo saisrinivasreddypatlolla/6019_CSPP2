@@ -10,15 +10,15 @@ class Set {
     /**.
      * variable for set.
      */
-    public int[] set;
+    protected int[] set;
     /**.
      * variable for size of set
      */
-    public int size;
+    protected int size;
     /**.
      * Constructs the object.
      */
-    protected Set() {
+    Set() {
         final int value = 10;
         set = new int[value];
         size = 0;

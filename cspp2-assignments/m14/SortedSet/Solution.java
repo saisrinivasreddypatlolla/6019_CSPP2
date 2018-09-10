@@ -300,6 +300,50 @@ public final class Solution {
             // split the line using space
             String[] tokens = line.split(" ");
             switch (tokens[0]) {
+            // case "size":
+            //     System.out.println(s.size());
+            //     break;
+            // case "contains":
+            //     System.out.println(s.contains(
+            //                            Integer.parseInt(tokens[1])));
+            //     break;
+            case "print":
+                System.out.println(s);
+                break;
+            // case "add":
+            //     int[] intArray = intArray(tokens[1]);
+            //     if (intArray.length == 1) {
+            //         s.add(intArray[0]);
+            //     } else {
+            //         s.add(intArray);
+            //     }
+            //     break;
+            // case "intersection":
+            //     s = new Set();
+            //     Set t = new Set();
+            //     intArray = intArray(tokens[1]);
+            //     s.add(intArray);
+            //     intArray = intArray(tokens[2]);
+            //     t.add(intArray);
+            //     System.out.println(s.intersection(t));
+            //     break;
+            // case "retainAll":
+            //     s = new Set();
+            //     intArray = intArray(tokens[1]);
+            //     s.add(intArray);
+            //     intArray = intArray(tokens[2]);
+            //     System.out.println(s.retainAll(intArray));
+            //     break;
+            // case "cartesianProduct":
+            //     s = new Set();
+            //     t = new Set();
+            //     intArray = intArray(tokens[1]);
+            //     s.add(intArray);
+            //     intArray = intArray(tokens[2]);
+            //     t.add(intArray);
+            //     System.out.println(Arrays.deepToString(
+            //                            s.cartesianProduct(t)));
+            //     break;
             case "addAll":
                 String[] strArray = tokens[1].split(",");
                 int[] intArray1 = new int[strArray.length];

@@ -221,8 +221,8 @@ class SortedSet extends Set {
      * Constructs the object.
      */
     SortedSet() {
-        final int TEN = 10;
-        set = new int[TEN];
+        final int ten = 10;
+        set = new int[ten];
         size = 0;
     }
     /**.

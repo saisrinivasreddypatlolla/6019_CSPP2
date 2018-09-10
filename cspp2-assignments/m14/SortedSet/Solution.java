@@ -105,7 +105,6 @@ class Set {
         }
 
     }
-    
     /**.
      * this function add set of values to the set[].
      *
@@ -178,7 +177,14 @@ class Set {
         }
         return newArray;
     }
-    public int get(int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == set[i]) {
                 return i;
@@ -194,7 +200,15 @@ class Set {
     }
 
 }
-class SortedSet extends Set{
+/**
+ * Class for sorted set.
+ */
+class SortedSet extends Set {
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -202,7 +216,15 @@ class SortedSet extends Set{
         }
         return set[size - 1];
     }
-    public int[] subSet(int start, int end) {
+    /**
+     * { function_description }.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] subSet(final int start, final int end) {
         if (size == 0) {
             int[] subSet = new int[0];
             return subSet;
@@ -216,12 +238,25 @@ class SortedSet extends Set{
         }
         return subSet;
     }
-    public void addAll(int[] items) {
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
+    public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
-    public int start(int start1) {
+
+    /**
+     * { function_description }.
+     *
+     * @param      start1  The start 1
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int start(final int start1) {
         for (int i = 0; i < size; i++) {
             if (start1 <= set[i]) {
                 return i;
@@ -229,7 +264,15 @@ class SortedSet extends Set{
         }
         return -1;
     }
-    public int end(int end1) {
+
+    /**
+     * { function_description }.
+     *
+     * @param      end1  The end 1
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int end(final int end1) {
         for (int i = size - 1; i >= 0; i--) {
             if (end1 >= set[i]) {
                 if (end1 > set[i]) {
@@ -240,7 +283,15 @@ class SortedSet extends Set{
         }
         return -1;
     }
-    public int[] headSet(int end) {
+
+    /**
+     * { function_description }.
+     *
+     * @param      end   The end
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] headSet(final int end) {
         int a = end(end);
         if (a == -1) {
             int[] temp = new int[0];
@@ -358,7 +409,8 @@ public final class Solution {
                     System.out.println("Invalid Arguments to Subset Exception");
                     break;
                 }
-                int[] temp1 = s.subSet(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
+                int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
+                    Integer.parseInt(temp[1]));
                 String str = "{";
                 int i;
                 if (temp1.length == 0) {

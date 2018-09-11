@@ -38,7 +38,6 @@ class List {
 		return -1;
 	}
 	public String toString() {
-		System.out.println(size + " toString");
 		if (size == 0) {
 			return "[]";
 		}

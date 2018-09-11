@@ -91,7 +91,7 @@ class List {
 	}
 	public List subList(int start, int end) throws Exception {
 		if (start < 0 || end > size) {
-			throw new Exception("Index Out Of Bounds Exception");
+			throw new Exception("Index Out of Bounds Exception");
 		}
 		List l = new List();
 		for (int i = start; i < end; i++) {

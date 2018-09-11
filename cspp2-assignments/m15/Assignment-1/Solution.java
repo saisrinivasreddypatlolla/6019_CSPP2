@@ -71,9 +71,9 @@ class List {
      * @return     { description_of_the_return_value }
      */
     public int get(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
-                return i;
+        for (int index = 0; index < size; index++) {
+            if (item == list[index]) {
+                return index;
             }
         }
         return -1;
@@ -88,8 +88,8 @@ class List {
             return "[]";
         }
         String str = "[";
-        for (int i = 0; i < size - 1; i++) {
-            str += list[i] + ",";
+        for (int index = 0; index < size - 1; index++) {
+            str += list[index] + ",";
         }
         return str + list[size - 1] + "]";
     }
@@ -111,9 +111,9 @@ class List {
      * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (list[i] == item) {
-                return i;
+        for (int index = 0; index < size; index++) {
+            if (list[index] == item) {
+                return index;
             }
         }
         return -1;
@@ -124,8 +124,8 @@ class List {
      * @param      items  The items
      */
     public void addAll(final int[] items) {
-        for (int i = 0; i < items.length; i++) {
-            add(items[i]);
+        for (int index = 0; index < items.length; index++) {
+            add(items[index]);
         }
     }
     /**.
@@ -153,8 +153,8 @@ class List {
      */
     public int count(final int item) {
         int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
+        for (int index = 0; index < size; index++) {
+            if (item == list[index]) {
                 count += 1;
             }
         }
@@ -168,9 +168,9 @@ class List {
      * @throws     Exception  { exception_description }
      */
     public void removeAll(final int[] items) throws Exception {
-        for (int i = 0; i < items.length; i++) {
-            while (indexOf(items[i]) != -1) {
-                remove(indexOf(items[i]));
+        for (int index = 0; index < items.length; index++) {
+            while (indexOf(items[index]) != -1) {
+                remove(indexOf(items[index]));
             }
         }
     }
@@ -189,20 +189,20 @@ class List {
             throw new Exception("Index Out of Bounds Exception");
         }
         List l = new List();
-        for (int i = start; i < end; i++) {
-            l.add(list[i]);
+        for (int index = start; index < end; index++) {
+            l.add(list[index]);
         }
         return l;
     }
     /**.
      * { function_description }
      *
-     * @param      l1    The l 1
+     * @param      listObject    The l 1
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List l1) {
-        return l1.toString().equals(toString());
+    public boolean equals(final List listObject) {
+        return listObject.toString().equals(toString());
     }
     /**.
      * { function_description }
@@ -234,13 +234,13 @@ final class Solution {
             switch (tokens[0]) {
             case "add":
                 if ((tokens.length) == 2) {
-                    String[] t = tokens[1].split(",");
-                    if (t.length == 1) {
+                    String[] tempArray = tokens[1].split(",");
+                    if (tempArray.length == 1) {
                         obj.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1) {
-                            obj.add(Integer.parseInt(t[0]),
-                                    Integer.parseInt(t[1]));
+                        if (tempArray.length > 1) {
+                            obj.add(Integer.parseInt(tempArray[0]),
+                                    Integer.parseInt(tempArray[1]));
                         }
                     }
                 }
@@ -268,10 +268,10 @@ final class Solution {
                 System.out.println(obj.indexOf(Integer.parseInt(tokens[1])));
                 break;
             case "addAll":
-                String[] t2 = tokens[1].split(",");
-                int[] temp = new int[t2.length];
-                for (int i = 0; i < t2.length; i++) {
-                    temp[i] = Integer.parseInt(t2[i]);
+                String[] tempArray0 = tokens[1].split(",");
+                int[] temp = new int[tempArray0.length];
+                for (int i = 0; i < tempArray0.length; i++) {
+                    temp[i] = Integer.parseInt(tempArray0[i]);
                 }
                 obj.addAll(temp);
                 break;
@@ -283,10 +283,10 @@ final class Solution {
                     break;
                 }
                 try {
-                    String[] t3 = tokens[1].split(",");
-                    int[] temp2 = new int[t3.length];
-                    for (int i = 0; i < t3.length; i++) {
-                        temp2[i] = Integer.parseInt(t3[i]);
+                    String[] tempArray1 = tokens[1].split(",");
+                    int[] temp2 = new int[tempArray1.length];
+                    for (int i = 0; i < tempArray1.length; i++) {
+                        temp2[i] = Integer.parseInt(tempArray1[i]);
                     }
                     obj.removeAll(temp2);
                 } catch (Exception e) {
@@ -295,9 +295,9 @@ final class Solution {
                 break;
             case "subList":
                 try {
-                    String[] s1 = tokens[1].split(",");
-                    List obj1 = obj.subList(Integer.parseInt(s1[0]),
-                                            Integer.parseInt(s1[1]));
+                    String[] tempArray2 = tokens[1].split(",");
+                    List obj1 = obj.subList(Integer.parseInt(tempArray2[0]),
+                                            Integer.parseInt(tempArray2[1]));
                     System.out.println(obj1.toString());
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
@@ -307,10 +307,10 @@ final class Solution {
                 if (tokens.length == 1) {
                     break;
                 }
-                String[] s2 = tokens[1].split(",");
+                String[] tempArray3 = tokens[1].split(",");
                 List obj2 = new List();
-                for (int i = 0; i < s2.length; i++) {
-                    obj2.add(Integer.parseInt(s2[i]));
+                for (int i = 0; i < tempArray3.length; i++) {
+                    obj2.add(Integer.parseInt(tempArray3[i]));
                 }
                 System.out.println(obj.equals(obj2));
                 break;

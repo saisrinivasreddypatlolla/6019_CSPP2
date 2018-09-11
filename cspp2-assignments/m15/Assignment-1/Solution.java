@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 /**.
  * List of .
  */
@@ -211,11 +212,14 @@ class List {
 
 
 }
+/**.
+ * { item_description }
+ */
 final class Solution {
 	/**.
 	 * Constructs the object.
 	 */
-	private Solution(){
+	private Solution() {
 
 	}
 	/**.

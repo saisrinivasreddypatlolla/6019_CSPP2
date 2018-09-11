@@ -282,10 +282,10 @@ final class Solution {
 			case "last":
 				try {
 					System.out.println(obj.last());
-					break;
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
+				break;
 			default:
 				break;
 

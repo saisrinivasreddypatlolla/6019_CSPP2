@@ -371,8 +371,7 @@ final class Solution {
                     str += tempB[tempB.length - 1] + "}";
                     System.out.println(str);
                 } catch (Exception e) {
-                    System.out.print("Invalid Arguments to");
-                    System.out.print(" Subset Exception");
+                    System.out.println("Invalid Arguments to Subset Exception");
                 }
                 break;
             case "headSet":

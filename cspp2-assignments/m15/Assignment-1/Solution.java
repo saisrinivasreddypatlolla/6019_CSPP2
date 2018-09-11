@@ -296,7 +296,8 @@ final class Solution {
             case "subList":
                 try {
                     String[] s1 = tokens[1].split(",");
-                    List obj1 = obj.subList(Integer.parseInt(s1[0]), Integer.parseInt(s1[1]));
+                    List obj1 = obj.subList(Integer.parseInt(s1[0]),
+                                            Integer.parseInt(s1[1]));
                     System.out.println(obj1.toString());
                 } catch (Exception e) {
                     System.out.println(e.getMessage());

@@ -18,34 +18,34 @@ class Set {
 		size = 0;
 	}
 	public void add(final int item) {
-        int flag = 0;
-        if (size == set.length) {
-            resize();
-        }
-        if (size >= 0) {
-            for (int index = 0; index < size; index++) {
-                if (item == set[index]) {
-                    flag = 1;
-                }
-            }
-            if (flag == 0) {
-                int i, j = 0, count = 0;
-                if (size > 0) {
-                    for (i = 0; i < size; i++) {
-                        if (item > set[i]) {
-                            count += 1;
-                        }
-                    }
-                    for (j = size; j > count; j--) {
-                        set[j] = set[j - 1];
-                    }
-                }
-                set[count] = item;
-                size++;
-            }
-        }
+		int flag = 0;
+		if (size == set.length) {
+			resize();
+		}
+		if (size >= 0) {
+			for (int index = 0; index < size; index++) {
+				if (item == set[index]) {
+					flag = 1;
+				}
+			}
+			if (flag == 0) {
+				int i, j = 0, count = 0;
+				if (size > 0) {
+					for (i = 0; i < size; i++) {
+						if (item > set[i]) {
+							count += 1;
+						}
+					}
+					for (j = size; j > count; j--) {
+						set[j] = set[j - 1];
+					}
+				}
+				set[count] = item;
+				size++;
+			}
+		}
 
-    }
+	}
 	// public void add(int[] items){
 	// 	for(int i=0;i<items.length;i++){
 	// 		add(items[i]);
@@ -257,10 +257,10 @@ final class Solution {
 					}
 					str += tempB[tempB.length - 1] + "}";
 					System.out.println(str);
-					break;
 				} catch (Exception e) {
 					System.out.println("Invalid Arguments to Subset Exception");
 				}
+				break;
 			case "headSet":
 				try {
 					int[] tempC = obj.headSet(Integer.parseInt(tokens[1]));

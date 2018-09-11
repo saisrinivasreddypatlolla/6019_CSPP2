@@ -248,10 +248,10 @@ final class Solution {
 					                         Integer.parseInt(tempA[1]));
 					String str = "{";
 					int i;
-					// if (tempB.length == 0) {
-					// 	System.out.println("{}");
-					// 	break;
-					// }
+					if (tempB.length == 0) {
+						System.out.println("{}");
+						break;
+					}
 					for (i = 0; i < tempB.length - 1; i++) {
 						str += tempB[i] + ", ";
 					}

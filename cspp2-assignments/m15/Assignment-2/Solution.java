@@ -1,22 +1,55 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**.
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
-	InvalidSubsetSelectionException(String s) {
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      s     { parameter_description }
+	 */
+	InvalidSubsetSelectionException(final String s) {
 		super(s);
 	}
 }
+/**.
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
-	SetEmptyException(String s) {
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      s     { parameter_description }
+	 */
+	SetEmptyException(final String s) {
 		super(s);
 	}
 }
+/**.
+ * Class for set.
+ */
 class Set {
+	/**.
+	 * { var_description }
+	 */
 	private int[] set;
+	/**.
+	 * { var_description }
+	 */
 	private int size;
+	/**.
+	 * Constructs the object.
+	 */
 	Set() {
 		set = new int[10];
 		size = 0;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 */
 	public void add(final int item) {
 		int flag = 0;
 		if (size == set.length) {
@@ -46,19 +79,29 @@ class Set {
 		}
 
 	}
-	// public void add(int[] items){
-	// 	for(int i=0;i<items.length;i++){
-	// 		add(items[i]);
-	// 	}
-	// }
+	/**.
+	 * Adds all.
+	 *
+	 * @param      items  The items
+	 */
 	public void addAll(int[] items) {
 		for (int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int size() {
 		return size;
 	}
+	/**.
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		if (size == 0) {
 			return "{}";
@@ -69,7 +112,14 @@ class Set {
 		}
 		return str + set[size - 1] + "}";
 	}
-	public Set intersection(Set s) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      s     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public Set intersection(final Set s) {
 		Set s1 = new Set();
 		for (int i = 0; i < size; i++) {
 			if (s.contains(set[i])) {
@@ -78,7 +128,14 @@ class Set {
 		}
 		return s1;
 	}
-	public Set retainAll(int[] items) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      items  The items
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public Set retainAll(final int[] items) {
 		Set s1 = new Set();
 		for (int index = 0; index < size; index++) {
 			for (int j = 0; j < items.length; j++) {
@@ -89,14 +146,30 @@ class Set {
 		}
 		return s1;
 	}
-
+	/**.
+	 * { function_description }
+	 */
 	private void resize() {
 		set = Arrays.copyOf(set, 2 * size);
 	}
-	public boolean contains(int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public boolean contains(final int item) {
 		return indexOf(item) != -1;
 	}
-	public int indexOf(int item) {
+	/**.
+	 * Searches for the first match.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int indexOf(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (set[i] == item) {
 				return i;
@@ -104,12 +177,29 @@ class Set {
 		}
 		return -1;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 *
+	 * @throws     SetEmptyException  { exception_description }
+	 */
 	public int last()throws SetEmptyException {
 		if (size == 0) {
 			throw new SetEmptyException("Set Empty Exception");
 		}
 		return set[size - 1];
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      start                            The start
+	 * @param      end                              The end
+	 *
+	 * @return     { description_of_the_return_value }
+	 *
+	 * @throws     InvalidSubsetSelectionException  { exception_description }
+	 */
 	public int[] subSet(final int start, final int end)throws InvalidSubsetSelectionException {
 		if (start > end) {
 			throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
@@ -162,11 +252,13 @@ class Set {
 		return -1;
 	}
 	/**.
-	 * { function_description }.
+	 * { function_description }
 	 *
-	 * @param      end   The end
+	 * @param      end                The end
 	 *
 	 * @return     { description_of_the_return_value }
+	 *
+	 * @throws     SetEmptyException  { exception_description }
 	 */
 	public int[] headSet(final int end)throws SetEmptyException {
 		if (end(end) < 1) {
@@ -185,7 +277,23 @@ class Set {
 	}
 
 }
+/**.
+ * { item_description }
+ */
 final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution(){
+
+	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      str   The string
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static int[] intArray(final String str) {
 		String input = str;
 		if (input.equals("[]")) {
@@ -240,10 +348,6 @@ final class Solution {
 			case "subSet":
 				try {
 					String[] tempA = tokens[1].split(",");
-					// if (Integer.parseInt(tempA[0]) > Integer.parseInt(tempA[1])) {
-					// 	System.out.println("Invalid Arguments to Subset Exception");
-					// 	break;
-					// }
 					int[] tempB = obj.subSet(Integer.parseInt(tempA[0]),
 					                         Integer.parseInt(tempA[1]));
 					String str = "{";

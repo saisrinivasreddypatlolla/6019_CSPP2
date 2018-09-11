@@ -204,7 +204,8 @@ class Set {
         InvalidSubsetSelectionException {
         if (start > end) {
             throw new
-            InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+            InvalidSubsetSelectionException(
+                "Invalid Arguments to Subset Exception");
         }
         if (size == 0) {
             int[] subSet = new int[0];

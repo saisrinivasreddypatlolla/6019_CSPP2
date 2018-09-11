@@ -42,7 +42,8 @@ class Set {
      * Constructs the object.
      */
     Set() {
-        set = new int[10];
+        final int ten = 10;
+        set = new int[ten];
         size = 0;
     }
     /**.
@@ -84,7 +85,7 @@ class Set {
      *
      * @param      items  The items
      */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }

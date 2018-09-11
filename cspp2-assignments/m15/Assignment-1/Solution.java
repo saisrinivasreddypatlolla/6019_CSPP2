@@ -90,7 +90,7 @@ class List {
 		}
 	}
 	public List subList(int start, int end) throws Exception {
-		if (start < 0 || end > size) {
+		if (start < 0 || end > size || start == end) {
 			throw new Exception("Index Out of Bounds Exception");
 		}
 		List l = new List();
@@ -162,6 +162,9 @@ class Solution {
 				System.out.println(obj.count(Integer.parseInt(tokens[1])));
 				break;
 			case "removeAll":
+				if (tokens.length == 1) {
+					break;
+				}
 				try {
 					String[] t3 = tokens[1].split(",");
 					int[] temp2 = new int[t3.length];

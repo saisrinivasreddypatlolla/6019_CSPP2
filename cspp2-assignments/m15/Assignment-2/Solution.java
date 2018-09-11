@@ -306,7 +306,12 @@ final class Solution {
 		       .mapToInt(Integer::parseInt)
 		       .toArray();
 	}
-	public static void main(String[] args) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Set obj = new Set();
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {

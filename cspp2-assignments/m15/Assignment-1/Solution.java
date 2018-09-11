@@ -117,17 +117,17 @@ class Solution {
 			switch (tokens[0]) {
 			case "add":
 				if ((tokens.length) == 2) {
-                    String[] t = tokens[1].split(",");
-                    if (t.length == 1) {
-                        obj.add(Integer.parseInt(tokens[1]));
-                    } else {
-                        if (t.length > 1) {
-                            obj.add(Integer.parseInt(t[0]),
-                                  Integer.parseInt(t[1]));
-                        }
-                    }
-                }
-                break;
+					String[] t = tokens[1].split(",");
+					if (t.length == 1) {
+						obj.add(Integer.parseInt(tokens[1]));
+					} else {
+						if (t.length > 1) {
+							obj.add(Integer.parseInt(t[0]),
+							        Integer.parseInt(t[1]));
+						}
+					}
+				}
+				break;
 			case "size":
 				System.out.println(obj.size());
 				break;
@@ -183,6 +183,9 @@ class Solution {
 				}
 				break;
 			case "equals":
+				if (tokens.length == 1) {
+					break;
+				}
 				String[] s2 = tokens[1].split(",");
 				List obj2 = new List();
 				for (int i = 0; i < s2.length; i++) {

@@ -110,9 +110,9 @@ class Set {
 		}
 		return set[size - 1];
 	}
-	public int[] subSet(final int start, final int end)throws Exception {
+	public int[] subSet(final int start, final int end)throws InvalidSubsetSelectionException {
 		if (start > end) {
-			throw new Exception("Invalid Arguments to Subset Exception");
+			throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
 		}
 		if (size == 0) {
 			int[] subSet = new int[0];

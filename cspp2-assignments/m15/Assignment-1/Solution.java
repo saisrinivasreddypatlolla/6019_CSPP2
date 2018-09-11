@@ -1,24 +1,56 @@
 import java.util.*;
+/**.
+ * List of .
+ */
 class List {
+	/**.
+	 * { var_description }
+	 */
 	private int[] list;
+	/**.
+	 * { var_description }
+	 */
 	private int size;
+	/**.
+	 * Constructs the object.
+	 */
 	List() {
 		list = new int[10];
 		size = 0;
 	}
+	/**.
+	 * { function_description }
+	 */
 	private void resize() {
 		list = Arrays.copyOf(list, 2 * size);
 	}
-	public void add(int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 */
+	public void add(final int item) {
 		if (size == list.length) {
 			resize();
 		}
 		list[size++] = item;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int size() {
 		return size;
 	}
-	public void remove(int index) throws Exception {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      index      The index
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public void remove(final int index) throws Exception {
 		if (index >= size || index < 0) {
 			throw new Exception("Invalid Position Exception");
 		} else {
@@ -29,7 +61,14 @@ class List {
 			size--;
 		}
 	}
-	public int get(int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int get(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (item == list[i]) {
 				return i;
@@ -37,6 +76,11 @@ class List {
 		}
 		return -1;
 	}
+	/**.
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		if (size == 0) {
 			return "[]";
@@ -47,10 +91,24 @@ class List {
 		}
 		return str + list[size - 1] + "]";
 	}
-	public boolean contains(int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public boolean contains(final int item) {
 		return indexOf(item) != -1;
 	}
-	public int indexOf(int item) {
+	/**.
+	 * Searches for the first match.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int indexOf(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (list[i] == item) {
 				return i;
@@ -58,12 +116,23 @@ class List {
 		}
 		return -1;
 	}
-	public void addAll(int[] items) {
+	/**.
+	 * Adds all.
+	 *
+	 * @param      items  The items
+	 */
+	public void addAll(final int[] items) {
 		for (int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
 	}
-	public void add(int index, int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      index  The index
+	 * @param      item   The item
+	 */
+	public void add(final int index, final int item) {
 		if (size == list.length) {
 			resize();
 		}
@@ -73,7 +142,14 @@ class List {
 		list[index] = item;
 		size++;
 	}
-	public int count(int item) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int count(final int item) {
 		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if (item == list[i]) {
@@ -82,14 +158,31 @@ class List {
 		}
 		return count;
 	}
-	public void removeAll(int[] items) throws Exception {
+	/**.
+	 * Removes all.
+	 *
+	 * @param      items      The items
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public void removeAll(final int[] items) throws Exception {
 		for (int i = 0; i < items.length; i++) {
 			while (indexOf(items[i]) != -1) {
 				remove(indexOf(items[i]));
 			}
 		}
 	}
-	public List subList(int start, int end) throws Exception {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      start      The start
+	 * @param      end        The end
+	 *
+	 * @return     { description_of_the_return_value }
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public List subList(final int start, final int end) throws Exception {
 		if (start < 0 || end > size || start == end) {
 			throw new Exception("Index Out of Bounds Exception");
 		}
@@ -99,17 +192,38 @@ class List {
 		}
 		return l;
 	}
-	public boolean equals(List l1) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      l1    The l 1
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public boolean equals(final List l1) {
 		return l1.toString().equals(toString());
 	}
+	/**.
+	 * { function_description }
+	 */
 	public void clear() {
 		size = 0;
 	}
 
 
 }
-class Solution {
-	public static void main(String[] args) {
+final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution(){
+
+	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		List obj = new List();
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {

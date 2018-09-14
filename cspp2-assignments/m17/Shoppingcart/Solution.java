@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 class Solution {
 	public static void main(String[] args) {
 		int k = 1;
@@ -11,8 +11,10 @@ class Solution {
 			case "Item":
 				String[] items = tokens[1].split(",");
 				c.addToCatalog(new Item(items[0],
-				                        Integer.parseInt(items[1]),
-				                        Double.parseDouble(items[2])));
+				                        Integer.parseInt(
+				                            items[1]),
+				                        Double.parseDouble(
+				                            items[2])));
 				break;
 			case "catalog":
 				c.showCatalog();
@@ -27,8 +29,8 @@ class Solution {
 				c.showCart();
 				break;
 			case "totalAmount":
-				System.out.println("totalAmount: " +
-				                   c.getTotalAmount());
+				System.out.println(
+				    "totalAmount: " + c.getTotalAmount());
 				break;
 			case "remove":
 				items = tokens[1].split(",");

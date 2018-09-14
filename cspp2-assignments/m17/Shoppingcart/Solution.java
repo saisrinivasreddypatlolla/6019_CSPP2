@@ -1,6 +1,20 @@
 import java.util.Scanner;
-class Solution {
-	public static void main(String[] args) {
+/**.
+ * { item_description }
+ */
+final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution(){
+
+	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		int k = 1;
 		ShoppingCart c = new ShoppingCart();
 		Scanner scan = new Scanner(System.in);
@@ -40,8 +54,7 @@ class Solution {
 				break;
 			case "payableAmount":
 				System.out.println(
-				    "Payable amount: " +
-				    c.getPayableAmount());
+				    "Payable amount: " + c.getPayableAmount());
 				break;
 			case "print":
 				c.printInvoice();

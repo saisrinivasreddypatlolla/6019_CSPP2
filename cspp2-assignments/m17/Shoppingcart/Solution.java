@@ -23,14 +23,14 @@ class Solution {
 				c.showCart();
 				break;
 			case "totalAmount":
-				System.out.println("totalAmount: "+c.getTotalAmount());
+				System.out.println("totalAmount: " + c.getTotalAmount());
 				break;
 			case "remove":
 				items = tokens[1].split(",");
 				c.removeFromCart(new Item(items[0], Integer.parseInt(items[1])));
 				break;
 			case "payableAmount":
-				System.out.println("Payable amount: "+c.getPayableAmount());
+				System.out.println("Payable amount: " + c.getPayableAmount());
 				break;
 			case "print":
 				c.printInvoice();

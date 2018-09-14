@@ -10,14 +10,17 @@ class Solution {
 			switch (tokens[0]) {
 			case "Item":
 				String[] items = tokens[1].split(",");
-				c.addToCatalog(new Item(items[0], Integer.parseInt(items[1]), Double.parseDouble(items[2])));
+				c.addToCatalog(new Item(items[0],
+				                        Integer.parseInt(items[1]),
+				                        Double.parseDouble(items[2])));
 				break;
 			case "catalog":
 				c.showCatalog();
 				break;
 			case "add":
 				items = tokens[1].split(",");
-				c.addToCart(new Item(items[0], Integer.parseInt(items[1])));
+				c.addToCart(new Item(items[0],
+				                     Integer.parseInt(items[1])));
 				break;
 			case "show":
 				c.showCart();
@@ -27,10 +30,12 @@ class Solution {
 				break;
 			case "remove":
 				items = tokens[1].split(",");
-				c.removeFromCart(new Item(items[0], Integer.parseInt(items[1])));
+				c.removeFromCart(new Item(items[0],
+				                          Integer.parseInt(items[1])));
 				break;
 			case "payableAmount":
-				System.out.println("Payable amount: " + c.getPayableAmount());
+				System.out.println(
+				    "Payable amount: " + c.getPayableAmount());
 				break;
 			case "print":
 				c.printInvoice();

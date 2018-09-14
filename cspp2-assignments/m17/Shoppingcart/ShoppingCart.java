@@ -44,7 +44,7 @@ class ShoppingCart {
 		io.remove(obj);
 	}
 	public double getPayableAmount() {
-		payableAmount = totalAmount-disc;
+		payableAmount = getTotalAmount()-disc;
 		double tax = payableAmount*0.15;
 		// for (int i = 0; i < io.size1; i++) {
 		// 	payableAmount += io.prices[indexOf(io.cartItems[i])] * io.cartQuantity[i];
@@ -60,6 +60,7 @@ class ShoppingCart {
 			disc = totalAmount * 0.30;
 		} else if (coupon.equals("IND50")) {
 			disc = totalAmount * 0.50;
+			System.out.println(totalAmount+" "+totalAmount * 0.50);
 		} else {
 			System.out.println("Invalid coupon");
 		}

@@ -53,6 +53,7 @@ class Quiz{
 		for(int i = 0;i<4;i++){
 			System.out.println(questions[i]+"("+marks[i]+")");
 			System.out.println(options[i][0]+"    "+options[i][1]+"    "+options[i][2]+"    "+options[i][3]);
+			System.out.println();
 
 		}
 	}

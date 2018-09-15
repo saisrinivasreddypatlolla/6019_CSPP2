@@ -141,6 +141,7 @@ public final class Solution {
 		if (size1 == 0) {
 			return;
 		}
+		count = 0;
 		for (int i = 0; i < size; i++) {
 			String ans = quiz.answers[i];
 			if(ans.equals("1")){

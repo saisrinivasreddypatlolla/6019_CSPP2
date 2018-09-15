@@ -143,17 +143,17 @@ public final class Solution {
 		}
 		for (int i = 0; i < size; i++) {
 			String ans = quiz.answers[i];
-			if(ans.equals("a")){
-				ans="1";
+			if(ans.equals("1")){
+				ans="a";
 			}
-			else if(ans.equals("b")){
-				ans = "2";
+			else if(ans.equals("2")){
+				ans = "b";
 			}
-			else if(ans.equals("c")){
-				ans = "3";
+			else if(ans.equals("3")){
+				ans = "c";
 			}
-			else if(ans.equals("d")){
-				ans = "4";
+			else if(ans.equals("4")){
+				ans = "d";
 			}
 			System.out.println(quiz.questions[i]);
 			if (ans.equals(str[i].substring(7))) {

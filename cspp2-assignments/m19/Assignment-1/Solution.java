@@ -8,7 +8,7 @@ public final class Solution {
 	/**
 	* Constructs the object.
 	*/
-	static int count = 0, size = 0;
+	static int count = 0, size = 0,size1 = 0;
 	static String[] str = new String[10];
 	static Quiz[] quiz1;
 	private Solution() {
@@ -67,12 +67,18 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		for (int i = 0; i < questionCount; i++) {
-			String questions = s.nextLine();
-			String[] items = questions.split(":");
-			quiz.add(new Quiz(items[0], items[1].split(","), items[2], Integer.parseInt(items[3]), Integer.parseInt(items[4])));
+		if (questionCount == 0) {
+			System.out.println("Quiz does not have questions");
+			return;
+		} else {
+			for (int i = 0; i < questionCount; i++) {
+				String questions = s.nextLine();
+				String[] items = questions.split(":");
+				size1++;
+				quiz.add(new Quiz(items[0], items[1].split(","), items[2], Integer.parseInt(items[3]), Integer.parseInt(items[4])));
+			}
+			System.out.println(questionCount + " are added to the quiz");
 		}
-		System.out.println(questionCount + " are added to the quiz");
 		// for (int i = 0; i < 4; i++) {
 		// System.out.println(quiz.questions[i]+" "+quiz.options[i]+" "+quiz.answers[i]+" "+quiz.marks[i]+" "+quiz.penalitys[i]);
 		// System.out.println(quiz1[i].getQuestion()+" "+quiz1[i].getOptions()+" "+quiz1[i].getAnswer()+" "+quiz1[i].getMarks()+" "+quiz1[i].getPenality());
@@ -90,6 +96,9 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
+		if(size1 ==0){
+			return;
+		}
 		quiz.print(answerCount);
 		for (int i = 0; i < answerCount; i++) {
 			str[i] = s.nextLine();
@@ -105,6 +114,9 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
+		if(size1 == 0){
+			return;
+		}
 		for (int i = 0; i < size; i++) {
 			String a = quiz.answers[i];
 			System.out.println(quiz.questions[i]);
@@ -116,6 +128,6 @@ public final class Solution {
 				count += quiz.penalitys[i];
 			}
 		}
-		System.out.println("Total Score: "+count);
+		System.out.println("Total Score: " + count);
 	}
 }

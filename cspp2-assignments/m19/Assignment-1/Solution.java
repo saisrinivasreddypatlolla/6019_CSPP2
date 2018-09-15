@@ -142,9 +142,21 @@ public final class Solution {
 			return;
 		}
 		for (int i = 0; i < size; i++) {
-			String a = quiz.answers[i];
+			String ans = quiz.answers[i];
+			if(ans.equals("a")){
+				ans="1";
+			}
+			else if(ans.equals("b")){
+				ans = "2";
+			}
+			else if(ans.equals("c")){
+				ans = "3";
+			}
+			else if(ans.equals("d")){
+				ans = "4";
+			}
 			System.out.println(quiz.questions[i]);
-			if (a.equals(str[i].substring(7))) {
+			if (ans.equals(str[i].substring(7))) {
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				count += quiz.marks[i];
 			} else {

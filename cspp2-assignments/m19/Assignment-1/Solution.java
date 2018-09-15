@@ -8,7 +8,7 @@ public final class Solution {
 	/**
 	* Constructs the object.
 	*/
-	static int count = 0, size = 0,size1 = 0;
+	static int count = 0, size = 0, size1 = 0;
 	static String[] str = new String[10];
 	static Quiz[] quiz1;
 	private Solution() {
@@ -74,27 +74,27 @@ public final class Solution {
 			for (int i = 0; i < questionCount; i++) {
 				String questions = s.nextLine();
 				String[] items = questions.split(":");
-				if(items.length <5){
+				if (items.length < 5) {
 					System.out.println("Error! Malformed question");
 					return;
 				}
-				if(Integer.parseInt(items[2])>4){
+				if (Integer.parseInt(items[2]) > 4) {
 					System.out.println("Error! Correct answer choice number is out of range for question text 1");
 					return;
 				}
-				if(items[1].split(",").length > 4){
+				if (items[1].split(",").length > 4) {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
 				}
-				if(Integer.parseInt(items[3])<0){
+				if (Integer.parseInt(items[3]) < 0) {
 					System.out.println("Invalid max marks for question about sony");
 					return;
 				}
-				if(Integer.parseInt(items[4])>0){
+				if (Integer.parseInt(items[4]) > 0) {
 					System.out.println("Invalid penalty for question about sony");
 					return;
 				}
-				if(items[0].equals(null)){
+				if (items[0].length() == 0) {
 					System.out.println("Error! Malformed question");
 					return;
 				}
@@ -120,7 +120,7 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
-		if(size1 ==0){
+		if (size1 == 0) {
 			return;
 		}
 		quiz.print(answerCount);
@@ -138,7 +138,7 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
-		if(size1 == 0){
+		if (size1 == 0) {
 			return;
 		}
 		for (int i = 0; i < size; i++) {

@@ -70,7 +70,7 @@ public final class Solution {
 		for (int i = 0; i < questionCount; i++) {
 			String questions = s.nextLine();
 			String[] items = questions.split(":");
-			quiz.add(new Quiz(items[0], items[1].split(","), Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4])));
+			quiz.add(new Quiz(items[0], items[1].split(","), items[2], Integer.parseInt(items[3]), Integer.parseInt(items[4])));
 		}
 		System.out.println(questionCount + " are added to the quiz");
 		// for (int i = 0; i < 4; i++) {
@@ -90,7 +90,7 @@ public final class Solution {
 		// write your code here to display the quiz questions
 		// read the user responses from the console
 		// store the user respones in the quiz object
-		quiz.print();
+		quiz.print(answerCount);
 		for (int i = 0; i < answerCount; i++) {
 			str[i] = s.nextLine();
 			size++;
@@ -106,7 +106,7 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report
 		for (int i = 0; i < size; i++) {
-			String a = Integer.toString(quiz.answers[i]);
+			String a = quiz.answers[i];
 			System.out.println(quiz.questions[i]);
 			if (a.equals(str[i].substring(7))) {
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);

@@ -53,7 +53,7 @@ class Quiz{
 	public void print(int ques){
 		for(int i = 0;i<ques;i++){
 			System.out.println(questions[i]+"("+marks[i]+")");
-			System.out.println(options[i][0]+"	"+options[i][1]+"	"+options[i][2]+"	"+options[i][3]);
+			System.out.println(options[i][0]+"\t"+options[i][1]+"\t"+options[i][2]+"\t"+options[i][3]);
 			System.out.println();
 
 		}

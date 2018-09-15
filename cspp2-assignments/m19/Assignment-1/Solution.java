@@ -78,12 +78,12 @@ public final class Solution {
 					System.out.println("Error! Malformed question");
 					return;
 				}
-				if (Integer.parseInt(items[2]) > 4) {
-					System.out.println("Error! Correct answer choice number is out of range for question text 1");
-					return;
-				}
 				if (items[1].split(",").length > 4) {
 					System.out.println("trick question  does not have enough answer choices");
+					return;
+				}
+				if (Integer.parseInt(items[2]) > 4) {
+					System.out.println("Error! Correct answer choice number is out of range for question text 1");
 					return;
 				}
 				if (Integer.parseInt(items[3]) < 0) {

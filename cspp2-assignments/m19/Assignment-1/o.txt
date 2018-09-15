@@ -1,0 +1,650 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Correct Answer! - Marks Awarded: 2
+question text 3
+ Correct Answer! - Marks Awarded: 3
+question text 4
+ Correct Answer! - Marks Awarded: 4
+Total Score: 10
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+Correct Answer! - Marks Awarded: 1
+question text 2
+Correct Answer! - Marks Awarded: 2
+question text 3
+Correct Answer! - Marks Awarded: 3
+question text 4
+Correct Answer! - Marks Awarded: 4
+Total Score: 10
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -10
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+Wrong Answer! - Penalty: -4
+question text 2
+Wrong Answer! - Penalty: -3
+question text 3
+Wrong Answer! - Penalty: -2
+question text 4
+Wrong Answer! - Penalty: -1
+Total Score: -10
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -5
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+Correct Answer! - Marks Awarded: 1
+question text 2
+Wrong Answer! - Penalty: -3
+question text 3
+Wrong Answer! - Penalty: -2
+question text 4
+Wrong Answer! - Penalty: -1
+Total Score: -5
+
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+10 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question a(1)
+choice a	choice b	choice c	choice d
+
+question b(2)
+choice a	choice b	choice c	choice d
+
+question c(3)
+choice a	choice b	choice c	choice d
+
+question d(4)
+choice a	choice b	choice c	choice d
+
+question e(1)
+choice a	choice b	choice c	choice d
+
+question f(2)
+choice a	choice b	choice c	choice d
+
+question g(3)
+choice a	choice b	choice c	choice d
+
+question h(4)
+choice a	choice b	choice c	choice d
+
+question i(1)
+choice a	choice b	choice c	choice d
+
+question j(2)
+choice a	choice b	choice c	choice d
+
+|--------------|
+| Score Report |
+|--------------|
+question a
+ Wrong Answer! - Penalty: 0
+question b
+ Wrong Answer! - Penalty: 0
+question c
+ Correct Answer! - Marks Awarded: 3
+question d
+ Wrong Answer! - Penalty: 0
+question e
+ Wrong Answer! - Penalty: 0
+question f
+ Wrong Answer! - Penalty: 0
+question g
+ Wrong Answer! - Penalty: 0
+question h
+ Wrong Answer! - Penalty: 0
+question i
+ Wrong Answer! - Penalty: 0
+question j
+ Wrong Answer! - Penalty: 0
+Total Score: 3
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+10 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question a(1)
+choice a	choice b	choice c	choice d
+
+question b(2)
+choice a	choice b	choice c	choice d
+
+question c(3)
+choice a	choice b	choice c	choice d
+
+question d(4)
+choice a	choice b	choice c	choice d
+
+question e(1)
+choice a	choice b	choice c	choice d
+
+question f(2)
+choice a	choice b	choice c	choice d
+
+question g(3)
+choice a	choice b	choice c	choice d
+
+question h(4)
+choice a	choice b	choice c	choice d
+
+question i(1)
+choice a	choice b	choice c	choice d
+
+question j(2)
+choice a	choice b	choice c	choice d
+
+|--------------|
+| Score Report |
+|--------------|
+question a
+Wrong Answer! - Penalty: 0
+question b
+Wrong Answer! - Penalty: 0
+question c
+Wrong Answer! - Penalty: 0
+question d
+Wrong Answer! - Penalty: 0
+question e
+Wrong Answer! - Penalty: 0
+question f
+Wrong Answer! - Penalty: 0
+question g
+Wrong Answer! - Penalty: 0
+question h
+Wrong Answer! - Penalty: 0
+question i
+Wrong Answer! - Penalty: 0
+question j
+Wrong Answer! - Penalty: 0
+Total Score: 0
+
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+Total Score: -4
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+Wrong Answer! - Penalty: -4
+Total Score: -4
+
+----------------------------------------
+########## Testcase 5: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Quiz does not have questions
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Quiz does not have questions
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 6: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 7: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 8: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 9: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+choice 4	choice 2
+
+|--------------|
+| Score Report |
+|--------------|
+question about sony
+ Correct Answer! - Marks Awarded: 1
+Total Score: 1
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 10: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid max marks for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 11: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid penalty for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 12: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+(1)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+
+Wrong Answer! - Penalty: -1
+Total Score: -1
+
+----------------------------------------
+Result: 3/13 testcases passed.
+Starting audit...
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:2: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:11:20: Variable 'count' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:11:31: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:11:40: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:11:40: Variable 'size1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:12:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:12:25: Variable 'str' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:12:42: '10' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:13:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:13:23: Variable 'quiz1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:14:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:16:34: '10' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:34: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:40: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:66: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:77:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:77:50: '5' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:77:50: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:77:52: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:78: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:81:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:81:62: '>' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:81:63: '4' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:81:63: '>' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:81:65: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:82: Line is longer than 80 characters (found 134). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:85:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:85:66: '4' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:85:68: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:86: Line is longer than 80 characters (found 114). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:89: Line is longer than 80 characters (found 148). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:89:115: '3' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:89:143: '4' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:92: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:95: Line is longer than 80 characters (found 137). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:96: Line is longer than 80 characters (found 164). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:107: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:111:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:111:28: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:111:30: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:122: First sentence should end with a period. [JavadocStyle]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:129:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:129:31: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:135:55: '7' is a magic number. [MagicNumber]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:136: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] E:\CSPP2\6019_CSPP2\cspp2-assignments\m19\Assignment-1\Solution.java:139: Line is longer than 80 characters (found 100). [LineLength]
+Audit done.
+Checkstyle ends with 48 errors.
+
+
+[master 1a8ce8a] "check_style_score -> 3 of 13 passed. style score: 0/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cspp2-assignments/m19/Assignment-1/o.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+

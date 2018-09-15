@@ -74,8 +74,12 @@ public final class Solution {
 			for (int i = 0; i < questionCount; i++) {
 				String questions = s.nextLine();
 				String[] items = questions.split(":");
-				size1++;
+				if(items.length <5){
+					System.out.println("Error! Malformed question");
+					return;
+				}
 				quiz.add(new Quiz(items[0], items[1].split(","), items[2], Integer.parseInt(items[3]), Integer.parseInt(items[4])));
+				size1++;
 			}
 			System.out.println(questionCount + " are added to the quiz");
 		}

@@ -78,23 +78,23 @@ public final class Solution {
 					System.out.println("Error! Malformed question");
 					return;
 				}
-				if (items[1].split(",").length < 4) {
+				else if (items[1].split(",").length < 4) {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
 				}
-				if (Integer.parseInt(items[2]) > 4) {
+				else if (Integer.parseInt(items[2]) > 4) {
 					System.out.println("Error! Correct answer choice number is out of range for question text 1");
 					return;
 				}
-				if (Integer.parseInt(items[3]) < 0) {
+				else if (Integer.parseInt(items[3]) < 0) {
 					System.out.println("Invalid max marks for question about sony");
 					return;
 				}
-				if (Integer.parseInt(items[4]) > 0) {
+				else if (Integer.parseInt(items[4]) > 0) {
 					System.out.println("Invalid penalty for question about sony");
 					return;
 				}
-				if (items[0].length() == 0) {
+				else if (items[0].length() == 0) {
 					System.out.println("Error! Malformed question");
 					return;
 				}

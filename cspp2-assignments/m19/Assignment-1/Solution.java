@@ -78,7 +78,7 @@ public final class Solution {
 					System.out.println("Error! Malformed question");
 					return;
 				}
-				else if (items[1].split(",").length < 4) {
+				else if (items[1].split(",").length < 4 && Integer.parseInt(items[3]) > 0) {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
 				}

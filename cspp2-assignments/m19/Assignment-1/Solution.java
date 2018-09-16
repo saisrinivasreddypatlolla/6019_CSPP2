@@ -166,6 +166,6 @@ public final class Solution {
 				count += quiz.penalitys[i];
 			}
 		}
-		System.out.println("Total Score: " + count);
+		System.out.print("Total Score: " + count);
 	}
 }

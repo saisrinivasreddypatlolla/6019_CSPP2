@@ -158,7 +158,7 @@ public final class Solution {
 			// }
 			System.out.println(quiz.questions[i]);
 			if (ans.equals(str[i].substring(7))) {
-				System.out.println(ans+" "+str[i].substring(7));
+				// System.out.println(ans+" "+str[i].substring(7));
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				count += quiz.marks[i];
 			} else {

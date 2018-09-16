@@ -144,20 +144,21 @@ public final class Solution {
 		count = 0;
 		for (int i = 0; i < size; i++) {
 			String ans = quiz.answers[i];
-			if(ans.equals("1")){
-				ans="a";
-			}
-			else if(ans.equals("2")){
-				ans = "b";
-			}
-			else if(ans.equals("3")){
-				ans = "c";
-			}
-			else if(ans.equals("4")){
-				ans = "d";
-			}
+			// if(ans.equals("1")){
+			// 	ans="a";
+			// }
+			// else if(ans.equals("2")){
+			// 	ans = "b";
+			// }
+			// else if(ans.equals("3")){
+			// 	ans = "c";
+			// }
+			// else if(ans.equals("4")){
+			// 	ans = "d";
+			// }
 			System.out.println(quiz.questions[i]);
 			if (ans.equals(str[i].substring(7))) {
+				System.out.println(ans+" "+str[i].substring(7));
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				count += quiz.marks[i];
 			} else {

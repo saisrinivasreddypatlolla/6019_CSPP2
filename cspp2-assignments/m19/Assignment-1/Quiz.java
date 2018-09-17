@@ -32,24 +32,6 @@ class Quiz{
 		penalitys[size] = q.penality;
 		size++;
 	}
-	public void Check(Quiz q){
-
-	}
-	// public String getQuestion(){
-	// 	return this.question;
-	// }
-	// public String[] getOptions(){
-	// 	return this.options;
-	// }
-	// public int getAnswer(){
-	// 	return this.answer;
-	// }
-	// public int getMarks(){
-	// 	return this.marks;
-	// }
-	// public int getPenality(){
-	// 	return this.penality;
-	// }
 	public void print(int ques){
 		for(int i = 0;i<ques;i++){
 			System.out.println(questions[i]+"("+marks[i]+")");

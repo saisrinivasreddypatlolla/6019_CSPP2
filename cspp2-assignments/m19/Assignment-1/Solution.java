@@ -77,24 +77,19 @@ public final class Solution {
 				if (items.length < 5) {
 					System.out.println("Error! Malformed question");
 					return;
-				}
-				else if (items[1].split(",").length < 2 && Integer.parseInt(items[3]) > 0 && Integer.parseInt(items[4]) < 0) {
+				} else if (items[1].split(",").length < 2 && Integer.parseInt(items[3]) > 0 && Integer.parseInt(items[4]) < 0) {
 					System.out.println("trick question  does not have enough answer choices");
 					return;
-				}
-				else if (Integer.parseInt(items[2]) > 4) {
+				} else if (Integer.parseInt(items[2]) > 4) {
 					System.out.println("Error! Correct answer choice number is out of range for question text 1");
 					return;
-				}
-				else if (Integer.parseInt(items[3]) < 0) {
+				} else if (Integer.parseInt(items[3]) < 0) {
 					System.out.println("Invalid max marks for question about sony");
 					return;
-				}
-				else if (Integer.parseInt(items[4]) > 0) {
+				} else if (Integer.parseInt(items[4]) > 0) {
 					System.out.println("Invalid penalty for question about sony");
 					return;
-				}
-				else if (items[0].length() == 0) {
+				} else if (items[0].length() == 0) {
 					System.out.println("Error! Malformed question");
 					return;
 				}
@@ -143,13 +138,13 @@ public final class Solution {
 			String ans = quiz.answers[i];
 			System.out.println(quiz.questions[i]);
 			String sub = str[i].substring(7);
-			if(sub.equals("a")){
+			if (sub.equals("a")) {
 				sub = "1";
-			}else if(sub.equals("b")){
+			} else if (sub.equals("b")) {
 				sub = "2";
-			}else if(sub.equals("c")){
+			} else if (sub.equals("c")) {
 				sub = "3";
-			}else if(sub.equals("d")){
+			} else if (sub.equals("d")) {
 				sub = "4";
 			}
 			if (ans.equals(sub)) {

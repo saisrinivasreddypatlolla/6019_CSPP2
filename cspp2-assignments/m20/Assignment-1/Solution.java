@@ -80,6 +80,14 @@ class Question {
 		return this.questiontext;
 	}
 	/**
+	 * Gets the correct response.
+	 *
+	 * @return     The correct response.
+	 */
+	public String getCorrectResponse() {
+		return choices[correctAnswer - 1];
+	}
+	/**
 	 * Gets the choice.
 	 *
 	 * @return     The choice.
@@ -347,18 +355,19 @@ public final class Solution {
 		}
 		int count = 0;
 		for (int i = 0; i < responeCount; i++) {
-			String ans = quiz.getQuestion(i).getCorrectAnswer();
+			String ans = quiz.getQuestion(i).getCorrectResponse();
 			System.out.println(quiz.getQuestion(i).getQuestionText());
-			String sub = str[i].substring(7);
-			if (sub.equals("a")) {
-				sub = "1";
-			} else if (sub.equals("b")) {
-				sub = "2";
-			} else if (sub.equals("c")) {
-				sub = "3";
-			} else if (sub.equals("d")) {
-				sub = "4";
-			}
+			String sub = str[i];
+			// 
+			// if (sub.equals("a")) {
+			// 	sub = "1";
+			// } else if (sub.equals("b")) {
+			// 	sub = "2";
+			// } else if (sub.equals("c")) {
+			// 	sub = "3";
+			// } else if (sub.equals("d")) {
+			// 	sub = "4";
+			// }
 			if (ans.equals(sub)) {
 				System.out.println(
 				    " Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());

@@ -288,16 +288,14 @@ public final class Solution {
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
 		if (q == 0) {
-			// System.out.println("Quiz does not have questions");
 			throw new Exception("Quiz does not have questions");
-			// return;
 		} else {
 			for (int i = 0; i < q; i++) {
 				String questions = scan.nextLine();
 				String[] items = questions.split(":");
 				if (items.length < 5 || items[0].length() == 0) {
 					throw new Exception("Error! Malformed question");
-				} else if ((items[1].split(",").length < 4) && (
+				} else if ((items[1].split(",").length < 2) && (
 				               Integer.parseInt(items[3]) > 0) && (
 				               Integer.parseInt(items[4]) < 0)) {
 					throw new Exception(
@@ -358,16 +356,6 @@ public final class Solution {
 			String ans = quiz.getQuestion(i).getCorrectResponse();
 			System.out.println(quiz.getQuestion(i).getQuestionText());
 			String sub = str[i];
-			// 
-			// if (sub.equals("a")) {
-			// 	sub = "1";
-			// } else if (sub.equals("b")) {
-			// 	sub = "2";
-			// } else if (sub.equals("c")) {
-			// 	sub = "3";
-			// } else if (sub.equals("d")) {
-			// 	sub = "4";
-			// }
 			if (ans.equals(sub)) {
 				System.out.println(
 				    " Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());

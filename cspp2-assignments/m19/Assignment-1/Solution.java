@@ -103,9 +103,6 @@ public final class Solution {
 			}
 			System.out.println(questionCount + " are added to the quiz");
 		}
-		// for (int i = 0; i < 4; i++) {
-		// System.out.println(quiz.questions[i]+" "+quiz.options[i]+" "+quiz.answers[i]+" "+quiz.marks[i]+" "+quiz.penalitys[i]);
-		// System.out.println(quiz1[i].getQuestion()+" "+quiz1[i].getOptions()+" "+quiz1[i].getAnswer()+" "+quiz1[i].getMarks()+" "+quiz1[i].getPenality());
 	}
 
 
@@ -144,21 +141,8 @@ public final class Solution {
 		count = 0;
 		for (int i = 0; i < size; i++) {
 			String ans = quiz.answers[i];
-			// if(ans.equals("1")){
-			// 	ans="a";
-			// }
-			// else if(ans.equals("2")){
-			// 	ans = "b";
-			// }
-			// else if(ans.equals("3")){
-			// 	ans = "c";
-			// }
-			// else if(ans.equals("4")){
-			// 	ans = "d";
-			// }
 			System.out.println(quiz.questions[i]);
 			if (ans.equals(str[i].substring(7))) {
-				// System.out.println(ans+" "+str[i].substring(7));
 				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				count += quiz.marks[i];
 			} else {

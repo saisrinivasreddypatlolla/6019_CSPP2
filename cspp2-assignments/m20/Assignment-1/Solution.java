@@ -192,7 +192,7 @@ class Quiz {
         String s = "";
         return s;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      ques  The ques
@@ -204,33 +204,33 @@ class Quiz {
     }
 
 }
-/**
+/**.
  * Solution class for code-eval.
  */
 public final class Solution {
-    /**
+    /**.
      * { var_description }
      */
     private static int size1 = 0;
-    /**
+    /**.
      * { var_description }
      */
     private static final int ten = 10;
-    /**
+    /**.
      * { var_description }
      */
     private static int responeCount = 0;
-    /**
+    /**.
      * { var_description }
      */
     private static String[] str = new String[ten];
-    /**
+    /**.
     * Constructs the object.
     */
     private Solution() {
         // leave this blank
     }
-    /**
+    /**.
      * main function to execute test cases.
      *
      * @param      args  The arguments
@@ -275,7 +275,7 @@ public final class Solution {
             }
         }
     }
-    /**
+    /**.
      * Loads questions.
      *
      * @param      scan       The scan
@@ -305,7 +305,7 @@ public final class Solution {
                 } else if (Integer.parseInt(items[2]) > 4) {
                     throw new Exception(
                         "Error! Correct answer choice number is out of"
-                        + "range for question text 1");
+                        + " range for question text 1");
                 } else if (Integer.parseInt(items[3]) < 0) {
                     throw new Exception(
                         "Invalid max marks for question about sony");
@@ -322,7 +322,7 @@ public final class Solution {
             System.out.println(q + " are added to the quiz");
         }
     }
-    /**
+    /**.
      * Starts a quiz.
      *
      * @param      scan  The scan
@@ -343,7 +343,7 @@ public final class Solution {
             responeCount++;
         }
     }
-    /**
+    /**.
      * Displays the score report.
      *
      * @param      quiz     The quiz object

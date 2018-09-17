@@ -143,10 +143,10 @@ public final class Solution {
 			String ans = quiz.answers[i];
 			System.out.println(quiz.questions[i]);
 			if (ans.equals(str[i].substring(7))) {
-				System.out.println("Correct Answer! - Marks Awarded: " + quiz.marks[i]);
+				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.marks[i]);
 				count += quiz.marks[i];
 			} else {
-				System.out.println("Wrong Answer! - Penalty: " + quiz.penalitys[i]);
+				System.out.println(" Wrong Answer! - Penalty: " + quiz.penalitys[i]);
 				count += quiz.penalitys[i];
 			}
 		}

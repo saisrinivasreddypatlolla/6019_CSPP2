@@ -221,6 +221,18 @@ public final class Solution {
     /**.
      * { var_description }
      */
+    private static final int three = 3;
+    /**.
+     * { var_description }
+     */
+    private static final int four = 4;
+    /**.
+     * { var_description }
+     */
+    private static final int five = 5;
+    /**.
+     * { var_description }
+     */
     private static int size1 = 0;
     /**.
      * { var_description }
@@ -305,28 +317,28 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String questions = scan.nextLine();
                 String[] items = questions.split(":");
-                if (items.length < 5 || items[0].length() == 0) {
+                if (items.length < five || items[0].length() == 0) {
                     throw new Exception("Error! Malformed question");
                 } else if ((items[1].split(",").length < 2) && (
-                               Integer.parseInt(items[3 + 0]) > 0) && (
-                               Integer.parseInt(items[4 + 0]) < 0)) {
+                               Integer.parseInt(items[three]) > 0) && (
+                               Integer.parseInt(items[four]) < 0)) {
                     throw new Exception(
                         "trick question  does not have enough answer choices");
-                } else if (Integer.parseInt(items[2 + 0]) > 4) {
+                } else if (Integer.parseInt(items[2]) > four) {
                     throw new Exception(
                         "Error! Correct answer choice number is out of"
                         + " range for question text 1");
-                } else if (Integer.parseInt(items[3 + 0]) < 0) {
+                } else if (Integer.parseInt(items[three]) < 0) {
                     throw new Exception(
                         "Invalid max marks for question about sony");
-                } else if (Integer.parseInt(items[4 + 0]) > 0) {
+                } else if (Integer.parseInt(items[four]) > 0) {
                     throw new Exception(
                         "Invalid penalty for question about sony");
                 }
                 quiz.addQuestion(new Question(items[0], items[1].split(","),
-                                              Integer.parseInt(items[2 + 0]),
-                                              Integer.parseInt(items[3 + 0]),
-                                              Integer.parseInt(items[4 + 0])));
+                                              Integer.parseInt(items[2]),
+                                              Integer.parseInt(items[three]),
+                                              Integer.parseInt(items[four])));
                 size1++;
             }
             System.out.println(q + " are added to the quiz");

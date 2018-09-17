@@ -181,34 +181,13 @@ class Quiz {
 	 */
 	public String showReport() {
 		String s = "";
-		// int count = 0;
-		// for (int i = 0; i < size; i++) {
-		// 	Question q = getQuestion(i);
-		// 	// String ans = q.getCorrectAnswer();
-		// 	s += q.getQuestionText()+"\n";
-		// 	// System.out.println(quiz.questions[i]);
-
-		// 	String sub = str[i].substring(7);
-		// 	if (sub.equals("a")) {
-		// 		sub = "1";
-		// 	} else if (sub.equals("b")) {
-		// 		sub = "2";
-		// 	} else if (sub.equals("c")) {
-		// 		sub = "3";
-		// 	} else if (sub.equals("d")) {
-		// 		sub = "4";
-		// 	}
-		// 	if (ans.equals(sub)) {
-		// 		System.out.println(" Correct Answer! - Marks Awarded: " + quiz.marks[i]);
-		// 		count += quiz.marks[i];
-		// 	} else {
-		// 		System.out.println(" Wrong Answer! - Penalty: " + quiz.penalitys[i]);
-		// 		count += quiz.penalitys[i];
-		// 	}
-		// }
-		// System.out.print("Total Score: " + count);
 		return s;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      ques  The ques
+	 */
 	public void print(int ques) {
 		for (int i = 0; i < ques; i++) {
 			System.out.println(questions[i].toString());
@@ -220,8 +199,22 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-	static int size1 = 0,responeCount =0;
-	static String[] str = new String[10];
+	/**
+	 * { var_description }
+	 */
+	private static int size1 = 0;
+	/**
+	 * { var_description }
+	 */
+	private static final int ten = 10;
+	/**
+	 * { var_description }
+	 */
+	private static int responeCount = 0;
+	/**
+	 * { var_description }
+	 */
+	private static String[] str = new String[ten];
 	/**
 	* Constructs the object.
 	*/
@@ -296,16 +289,25 @@ public final class Solution {
 				String[] items = questions.split(":");
 				if (items.length < 5 || items[0].length() == 0) {
 					throw new Exception("Error! Malformed question");
-				} else if (items[1].split(",").length < 4 && Integer.parseInt(items[3]) > 0 && Integer.parseInt(items[4]) < 0) {
-					throw new Exception("trick question  does not have enough answer choices");
+				} else if ((items[1].split(",").length < 4) && (
+				               Integer.parseInt(items[3]) > 0) && (
+				               Integer.parseInt(items[4]) < 0)) {
+					throw new Exception(
+					    "trick question  does not have enough answer choices");
 				} else if (Integer.parseInt(items[2]) > 4) {
-					throw new Exception("Error! Correct answer choice number is out of range for question text 1");
+					throw new Exception(
+					    "Error! Correct answer choice number is out of range for question text 1");
 				} else if (Integer.parseInt(items[3]) < 0) {
-					throw new Exception("Invalid max marks for question about sony");
+					throw new Exception(
+					    "Invalid max marks for question about sony");
 				} else if (Integer.parseInt(items[4]) > 0) {
-					throw new Exception("Invalid penalty for question about sony");
+					throw new Exception(
+					    "Invalid penalty for question about sony");
 				}
-				quiz.addQuestion(new Question(items[0], items[1].split(","), Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4])));
+				quiz.addQuestion(new Question(items[0], items[1].split(","),
+				                              Integer.parseInt(items[2]),
+				                              Integer.parseInt(items[3]),
+				                              Integer.parseInt(items[4])));
 				size1++;
 			}
 			System.out.println(q + " are added to the quiz");
@@ -326,17 +328,11 @@ public final class Solution {
 		if (size1 == 0) {
 			return;
 		}
-		// Question que = new Question();
 		quiz.print(q);
-		// que.
 		for (int i = 0; i < q; i++) {
 			str[i] = scan.nextLine();
 			responeCount++;
 		}
-		// for (int i = 0; i < answerCount; i++) {
-		// 	str[i] = s.nextLine();
-		// 	size++;
-		// }
 	}
 	/**
 	 * Displays the score report.
@@ -364,10 +360,12 @@ public final class Solution {
 				sub = "4";
 			}
 			if (ans.equals(sub)) {
-				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());
+				System.out.println(
+				    " Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());
 				count += quiz.getQuestion(i).getMaxMarks();
 			} else {
-				System.out.println(" Wrong Answer! - Penalty: " + quiz.getQuestion(i).getPenalty());
+				System.out.println(
+				    " Wrong Answer! - Penalty: " + quiz.getQuestion(i).getPenalty());
 				count += quiz.getQuestion(i).getPenalty();
 			}
 		}

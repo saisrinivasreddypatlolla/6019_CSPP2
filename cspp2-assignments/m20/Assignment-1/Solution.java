@@ -6,7 +6,7 @@ class Question {
     /**.
      * { var_description }
      */
-    final int ten = 10;
+    private final int ten = 10;
     /**
      * { var_description }.
      */
@@ -155,7 +155,10 @@ class Question {
  * Class for quiz.
  */
 class Quiz {
-    final int ten = 10;
+    /**.
+     * { var_description }
+     */
+    private final int ten = 10;
     /**
      * { var_description }.
      */
@@ -221,15 +224,15 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int three = 3;
+    private static final int Three = 3;
     /**.
      * { var_description }
      */
-    private static final int four = 4;
+    private static final int Four = 4;
     /**.
      * { var_description }
      */
-    private static final int five = 5;
+    private static final int Five = 5;
     /**.
      * { var_description }
      */
@@ -237,7 +240,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int ten = 10;
+    private static final int Ten = 10;
     /**.
      * { var_description }
      */
@@ -245,7 +248,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static String[] str = new String[ten];
+    private static String[] str = new String[Ten];
     /**.
     * Constructs the object.
     */
@@ -317,28 +320,28 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String questions = scan.nextLine();
                 String[] items = questions.split(":");
-                if (items.length < five || items[0].length() == 0) {
+                if (items.length < Five || items[0].length() == 0) {
                     throw new Exception("Error! Malformed question");
                 } else if ((items[1].split(",").length < 2) && (
-                               Integer.parseInt(items[three]) > 0) && (
-                               Integer.parseInt(items[four]) < 0)) {
+                               Integer.parseInt(items[Three]) > 0) && (
+                               Integer.parseInt(items[Four]) < 0)) {
                     throw new Exception(
                         "trick question  does not have enough answer choices");
-                } else if (Integer.parseInt(items[2]) > four) {
+                } else if (Integer.parseInt(items[2]) > Four) {
                     throw new Exception(
                         "Error! Correct answer choice number is out of"
                         + " range for question text 1");
-                } else if (Integer.parseInt(items[three]) < 0) {
+                } else if (Integer.parseInt(items[Three]) < 0) {
                     throw new Exception(
                         "Invalid max marks for question about sony");
-                } else if (Integer.parseInt(items[four]) > 0) {
+                } else if (Integer.parseInt(items[Four]) > 0) {
                     throw new Exception(
                         "Invalid penalty for question about sony");
                 }
                 quiz.addQuestion(new Question(items[0], items[1].split(","),
                                               Integer.parseInt(items[2]),
-                                              Integer.parseInt(items[three]),
-                                              Integer.parseInt(items[four])));
+                                              Integer.parseInt(items[Three]),
+                                              Integer.parseInt(items[Four])));
                 size1++;
             }
             System.out.println(q + " are added to the quiz");

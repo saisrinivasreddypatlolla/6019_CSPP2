@@ -220,7 +220,8 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-	static int size1 = 0;
+	static int size1 = 0,responeCount =0;
+	static String[] str = new String[10];
 	/**
 	* Constructs the object.
 	*/
@@ -295,30 +296,15 @@ public final class Solution {
 				String[] items = questions.split(":");
 				if (items.length < 5 || items[0].length() == 0) {
 					throw new Exception("Error! Malformed question");
-					// System.out.println("Error! Malformed question");
-					// return;
 				} else if (items[1].split(",").length < 4 && Integer.parseInt(items[3]) > 0 && Integer.parseInt(items[4]) < 0) {
 					throw new Exception("trick question  does not have enough answer choices");
-					// System.out.println("trick question  does not have enough answer choices");
-					// return;
 				} else if (Integer.parseInt(items[2]) > 4) {
 					throw new Exception("Error! Correct answer choice number is out of range for question text 1");
-					// System.out.println("Error! Correct answer choice number is out of range for question text 1");
-					// return;
 				} else if (Integer.parseInt(items[3]) < 0) {
 					throw new Exception("Invalid max marks for question about sony");
-					// System.out.println("Invalid max marks for question about sony");
-					// return;
 				} else if (Integer.parseInt(items[4]) > 0) {
 					throw new Exception("Invalid penalty for question about sony");
-					// System.out.println("Invalid penalty for question about sony");
-					// return;
-				} // else if () {
-				// 	// System.out.println("Error! Malformed question");
-				// 	// return;
-				// 	throw new Exception("Error! Malformed question");
-				// }
-				// questions[size++] = new Quiz(items[0], items[1].split(","), items[2], Integer.parseInt(items[3]), Integer.parseInt(items[4]))
+				}
 				quiz.addQuestion(new Question(items[0], items[1].split(","), Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4])));
 				size1++;
 			}
@@ -340,10 +326,13 @@ public final class Solution {
 		if (size1 == 0) {
 			return;
 		}
-		quiz.print(q);
-		// for (int i = 0; i < q; i++) {
-		// 	quiz.s.nextLine());
-		// }
+		// Question que = new Question();
+		// quiz.print(q);
+		// que.
+		for (int i = 0; i < q; i++) {
+			str[i] = scan.nextLine();
+			responeCount++;
+		}
 		// for (int i = 0; i < answerCount; i++) {
 		// 	str[i] = s.nextLine();
 		// 	size++;
@@ -360,7 +349,29 @@ public final class Solution {
 		if (size1 == 0) {
 			return;
 		}
-		System.out.println(quiz.showReport());
+		int count = 0;
+		for (int i = 0; i < responeCount; i++) {
+			String ans = quiz.getQuestion(i).getCorrectAnswer();
+			System.out.println(quiz.getQuestion(i).getQuestionText());
+			String sub = str[i].substring(7);
+			if (sub.equals("a")) {
+				sub = "1";
+			} else if (sub.equals("b")) {
+				sub = "2";
+			} else if (sub.equals("c")) {
+				sub = "3";
+			} else if (sub.equals("d")) {
+				sub = "4";
+			}
+			if (ans.equals(sub)) {
+				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());
+				count += quiz.getQuestion(i).getMaxMarks();
+			} else {
+				System.out.println(" Wrong Answer! - Penalty: " + quiz.getQuestion(i).getPenalty());
+				count += quiz.getQuestion(i).getPenalty();
+			}
+		}
+		System.out.print("Total Score: " + count);
 
 	}
 }

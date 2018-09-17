@@ -6,7 +6,7 @@ class Question {
     /**.
      * { var_description }
      */
-    final int ten = 10;
+    final int _ten = 10;
     /**
      * { var_description }.
      */
@@ -35,7 +35,7 @@ class Question {
      * Constructs the object.
      */
     Question() {
-        choices = new String[ten];
+        choices = new String[_ten];
     }
     /**
      * Constructs the object.
@@ -155,7 +155,7 @@ class Question {
  * Class for quiz.
  */
 class Quiz {
-    final int ten = 10;
+    final int _ten = 10;
     /**
      * { var_description }.
      */
@@ -172,7 +172,7 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-        questions = new Question[ten];
+        questions = new Question[_ten];
         size = 0;
     }
     /**
@@ -237,7 +237,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int ten = 10;
+    private static final int _ten = 10;
     /**.
      * { var_description }
      */
@@ -245,7 +245,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static String[] str = new String[ten];
+    private static String[] str = new String[_ten];
     /**.
     * Constructs the object.
     */

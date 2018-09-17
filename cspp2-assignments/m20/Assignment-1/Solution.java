@@ -327,7 +327,7 @@ public final class Solution {
 			return;
 		}
 		// Question que = new Question();
-		// quiz.print(q);
+		quiz.print(q);
 		// que.
 		for (int i = 0; i < q; i++) {
 			str[i] = scan.nextLine();

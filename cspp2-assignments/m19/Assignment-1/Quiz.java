@@ -35,10 +35,11 @@ class Quiz{
 	public void print(int ques){
 		for(int i = 0;i<ques;i++){
 			System.out.println(questions[i]+"("+marks[i]+")");
-			for(int j=0;j<options[i].length-1;j++){
-				System.out.print(options[i][j]+"\t");
-			}System.out.print(options[i][options[i].length-1]);
+			System.out.println(options[i][0]+"\t"+options[i][1]+"\t"+options[i][2]+"\t"+options[i][3]);
 			System.out.println();
+			// for(int j=0;j<options[i].length-1;j++){
+			// 	System.out.print(options[i][j]+"\t");
+			// }System.out.print(options[i][options[i].length-1]);
 
 		}
 	}

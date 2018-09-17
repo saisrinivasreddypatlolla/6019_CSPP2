@@ -6,7 +6,7 @@ class Question {
     /**.
      * { var_description }
      */
-    final int _ten = 10;
+    final int Ten = 10;
     /**
      * { var_description }.
      */
@@ -35,7 +35,7 @@ class Question {
      * Constructs the object.
      */
     Question() {
-        choices = new String[_ten];
+        choices = new String[Ten];
     }
     /**
      * Constructs the object.
@@ -155,7 +155,7 @@ class Question {
  * Class for quiz.
  */
 class Quiz {
-    final int _ten = 10;
+    final int Ten = 10;
     /**
      * { var_description }.
      */
@@ -172,7 +172,7 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-        questions = new Question[_ten];
+        questions = new Question[Ten];
         size = 0;
     }
     /**
@@ -237,7 +237,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static final int _ten = 10;
+    private static final int Ten = 10;
     /**.
      * { var_description }
      */
@@ -245,7 +245,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static String[] str = new String[_ten];
+    private static String[] str = new String[Ten];
     /**.
     * Constructs the object.
     */
@@ -383,13 +383,13 @@ public final class Solution {
             String sub = str[i];
             if (ans.equals(sub)) {
                 System.out.println(
-                    " Correct Answer! - Marks Awarded: " +
-                    quiz.getQuestion(i).getMaxMarks());
+                    " Correct Answer! - Marks Awarded: "
+                    + quiz.getQuestion(i).getMaxMarks());
                 count += quiz.getQuestion(i).getMaxMarks();
             } else {
                 System.out.println(
-                    " Wrong Answer! - Penalty: " +
-                    quiz.getQuestion(i).getPenalty());
+                    " Wrong Answer! - Penalty: "
+                    + quiz.getQuestion(i).getPenalty());
                 count += quiz.getQuestion(i).getPenalty();
             }
         }

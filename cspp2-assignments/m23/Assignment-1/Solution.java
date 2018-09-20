@@ -59,7 +59,7 @@ public final class Solution {
                     double per = (sum / (Math.sqrt(
                                              sum1) * Math.sqrt(
                                              sum2))) * hundred;
-                    System.out.print(Math.round(per) + "\t\t");
+                    System.out.print(Math.round(per) + "\t");
                 }
             }
         } catch (Exception e) {

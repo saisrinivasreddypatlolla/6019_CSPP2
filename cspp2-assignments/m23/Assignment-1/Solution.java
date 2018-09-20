@@ -35,7 +35,7 @@ public final class Solution {
             }
             System.out.println();
             for (File files1 : files) {
-                // System.out.println();
+                System.out.println();
                 System.out.print(files1.toString().split("\\\\")[1] + "\t");
                 for (File files2 : files) {
                     Distance map1 = new Distance(files1);

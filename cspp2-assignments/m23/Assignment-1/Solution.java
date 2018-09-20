@@ -102,7 +102,7 @@ public final class Solution {
 			0.4217057138495239 angle
 			*/
 
-		}catch(Exception e){
+		} catch (Exception e) {
 			System.out.println("empty directory");
 		}
 	}

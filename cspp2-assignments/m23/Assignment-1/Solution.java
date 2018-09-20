@@ -21,7 +21,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         try {
-            final int HUNDRED = 100;
+            final int hundred = 100;
             Scanner scan = new Scanner(System.in);
             String dir = scan.nextLine();
             File folder = new File(dir);
@@ -56,7 +56,7 @@ public final class Solution {
                     }
                     double per = (sum / (Math.sqrt(
                                              sum1) * Math.sqrt(
-                                             sum2))) * HUNDRED;
+                                             sum2))) * hundred;
                     System.out.println(Math.round(per));
                 }
             }

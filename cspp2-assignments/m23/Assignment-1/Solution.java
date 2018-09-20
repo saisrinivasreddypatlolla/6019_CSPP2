@@ -31,10 +31,12 @@ public final class Solution {
                 return;
             }
             for (File i : files) {
-                System.out.print("\t" + i);
+                System.out.print("\t" + i.toString().split("\\\\")[1]);
             }
             System.out.println();
             for (File files1 : files) {
+                System.out.println();
+                System.out.print(files1.toString().split("\\\\")[1]+"\t");
                 for (File files2 : files) {
                     Distance map1 = new Distance(files1);
                     double sum1 = map1.ecludian();
@@ -57,7 +59,7 @@ public final class Solution {
                     double per = (sum / (Math.sqrt(
                                              sum1) * Math.sqrt(
                                              sum2))) * hundred;
-                    System.out.println(Math.round(per));
+                    System.out.print(Math.round(per)+"\t");
                 }
             }
         } catch (Exception e) {

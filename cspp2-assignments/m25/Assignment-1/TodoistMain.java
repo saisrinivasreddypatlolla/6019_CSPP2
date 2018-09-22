@@ -198,9 +198,9 @@ class Todoist {
        String str="";
        int i;
        for(i=0;i<obj.length-1;i++){
-        str+=obj[i]+"\n";
+        str+=obj[i].toString()+"\n";
        }
-       return str+obj[i];
+       return str+obj[i].toString();
     }
 
 

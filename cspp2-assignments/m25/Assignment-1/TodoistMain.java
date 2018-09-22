@@ -25,9 +25,9 @@ public class TodoistMain {
             case "add-task":
                 testAddTask(todo, tokens);
                 break;
-            case "print-todoist":
-                System.out.println(todo);
-                break;
+            // case "print-todoist":
+            //     System.out.println(todo);
+            //     break;
             // case "get-next":
             //     System.out.println(todo.getNextTask(tokens[1]));
             //     break;
@@ -89,13 +89,13 @@ public class TodoistMain {
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         if (timeToComplete < 0) {
-            throw new Exception("Inavlid timeToComplete " + timeToComplete);
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
         if (!(status.equals("todo") || status.equals("done"))) {
-            throw new Exception("Inavlid status " + status);
+            throw new Exception("Invalid status " + status);
         }
         return new Task(
                    title, assignedTo, timeToComplete, important, urgent, status);
@@ -187,13 +187,21 @@ class Todoist {
     }
     // public Task getNextTask(String s) {
 
-    // // }
+    // }
     // public Task[] getNextTask(String s, int n) {
 
-    // // }
+    // }
     // public int totalTime4Completion() {
 
-    // // }
+    // }
+    public String toString(){
+       String str="";
+       int i;
+       for(i=0;i<obj.length-1;i++){
+        str+=obj[i]+"\n";
+       }
+       return str+obj[i];
+    }
 
 
 }

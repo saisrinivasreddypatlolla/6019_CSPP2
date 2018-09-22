@@ -194,6 +194,7 @@ class Todoist {
     // public int totalTime4Completion() {
 
     // }
+    @Override
     public String toString(){
        String str="";
        int i;

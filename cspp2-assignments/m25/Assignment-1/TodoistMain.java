@@ -25,9 +25,9 @@ public class TodoistMain {
             case "add-task":
                 testAddTask(todo, tokens);
                 break;
-            // case "print-todoist":
-            //     System.out.println(todo);
-            //     break;
+            case "print-todoist":
+                System.out.println(todo.toString());
+                break;
             // case "get-next":
             //     System.out.println(todo.getNextTask(tokens[1]));
             //     break;
@@ -129,30 +129,37 @@ class Task {
         this.status = status1;
     }
     public String getTitle() {
-        
+        // System.out.println(title);
         return this. title;
     }
     public String getAssignedTo() {
+        // System.out.println(assignedTo);
+
         return this.assignedTo;
     }
     public int getTimeToComplete() {
-        
+        // System.out.println(timeToComplete);
+
         return this.timeToComplete;
     }
     public String getImportant() {
+        // System.out.println(urgent);
+
         if (important == true) {
             return "Important";
         }
         return "Not Important";
     }
     public String getUrgent() {
+        // System.out.println(important);
+
         if (urgent == true) {
             return "Urgent";
         }
         return "Not Urgent";
     }
     public String getStatus() {
-        
+        // System.out.println(status);
         return this.status;
     }
     @Override
@@ -195,15 +202,16 @@ class Todoist {
 
     // }
     @Override
-    public String toString(){
-       String str="";
-       int i;
-       for(i=0;i<obj.length-1;i++){
-        str+=obj[i].getTitle()+", "+obj[i].getAssignedTo()+", "+obj[i].getTimeToComplete()
-        +obj[i].getImportant()+", "+obj[i].getUrgent()+", "+obj[i].getStatus()+"\n";
-       }
-       return str+obj[i].getTitle()+", "+obj[i].getAssignedTo()+", "+obj[i].getTimeToComplete()
-        +obj[i].getImportant()+", "+obj[i].getUrgent()+", "+obj[i].getStatus();
+    public String toString() {
+        String str = "";
+        int i;
+        for (i = 0; i < size - 1; i++) {
+            str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
+                   + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus() + "\n";
+        }
+        str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
+               + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus();
+        return str;
     }
 
 

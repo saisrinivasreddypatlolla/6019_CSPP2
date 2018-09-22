@@ -128,14 +128,14 @@ class Task {
         this.urgent = urgent1;
         this.status = status1;
     }
-    public String getTitle()throws Exception {
+    public String getTitle() {
         
         return this. title;
     }
     public String getAssignedTo() {
         return this.assignedTo;
     }
-    public int getTimeToComplete()throws Exception {
+    public int getTimeToComplete() {
         
         return this.timeToComplete;
     }
@@ -151,15 +151,15 @@ class Task {
         }
         return "Not Urgent";
     }
-    public String getStatus() throws Exception {
+    public String getStatus() {
         
         return this.status;
     }
     @Override
     public String toString() {
         String s = "";
-        s += this.title + ", " + this.assignedTo + ", " + this.timeToComplete
-             + ", " + this.important + ", " + this.urgent + ", " + this.status;
+        s += getTitle() + ", " + getAssignedTo() + ", " + getTimeToComplete()
+             + ", " + getImportant() + ", " + getUrgent() + ", " + getStatus();
         // for (int i = 0; i < obj.length; i++) {
         //     s += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", "
         //          + obj[i].getTimeToComplete() + ", " + obj[i].getImportant() + ", "

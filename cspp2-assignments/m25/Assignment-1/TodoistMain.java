@@ -110,16 +110,50 @@ public class TodoistMain {
         startTest();
     }
 }
+/**.
+ * Class for task.
+ */
 class Task {
+    /**.
+     * { var_description }
+     */
     String title;
+    /**.
+     * { var_description }
+     */
     String assignedTo;
+    /**.
+     * { var_description }
+     */
     int timeToComplete;
+    /**.
+     * { var_description }
+     */
     boolean important;
+    /**.
+     * { var_description }
+     */
     boolean urgent;
+    /**.
+     * { var_description }
+     */
     String status;
+    /**.
+     * Constructs the object.
+     */
     Task() {
 
     }
+    /**.
+     * Constructs the object.
+     *
+     * @param      title1           The title 1
+     * @param      assignedTo1      The assigned to 1
+     * @param      timeToComplete1  The time to complete 1
+     * @param      important1       The important 1
+     * @param      urgent1          The urgent 1
+     * @param      status1          The status 1
+     */
     Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) {
         this.title = title1;
         this.assignedTo = assignedTo1;
@@ -128,10 +162,20 @@ class Task {
         this.urgent = urgent1;
         this.status = status1;
     }
+    /**.
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         // System.out.println(title);
         return this. title;
     }
+    /**.
+     * Gets the assigned to.
+     *
+     * @return     The assigned to.
+     */
     public String getAssignedTo() {
         // System.out.println(assignedTo);
 
@@ -174,7 +218,8 @@ class Task {
 class Todoist {
     Task[] obj;
     int size;
-    int flag=0;
+    int flag = 0, flag1 = 0;
+    Task[] tasks;
     Todoist() {
         obj = new Task[10];
         size = 0;
@@ -214,43 +259,61 @@ class Todoist {
 
     }
     public Task[] getNextTask(String s, int n) {
-        Task[] tasks = new Task[3];
+        Task x = new Task();
+        int count = 0, k = 0;
+        tasks = new Task[3];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < size; j++) {
+            for (int j = k; j < size; j++) {
                 if (s.equals(obj[j].getAssignedTo())) {
                     if (obj[j].getStatus().equals("todo")) {
+                        System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s + " " + obj[j]);
+
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Not Urgent"))) {
-                            // tasks[i] = obj[j];
+                            x = obj[j];
                             flag = 1;
+                            k = j + 1;
+
                         }
                     }
                 }
             }
-            for (int j = 0; j < size; j++) {
+            for (int j = k; j < size; j++) {
                 if (s.equals(obj[j].getAssignedTo())) {
+                    System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s);
                     if (obj[j].getStatus().equals("todo")) {
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Urgent"))) {
-                            // tasks[i] = obj[j];
+                            x = obj[j];
                             flag = 1;
+                            k = j + 1;
                         }
                     }
                 }
             }
+            // for (int k = 0; k < tasks.length; k++) {
+            //     if (!(x.equals(tasks[i]))) {
+            //         flag1 = 1;
+            //     }
+            // }
             if (flag == 1) {
-                tasks[i] = obj[i];
+                tasks[i] = x;
+                count++;
             } else {
                 tasks[i] = null;
+
+                System.out.println(Arrays.toString(tasks));
             }
+
+
         }
         return tasks;
     }
     public int totalTime4Completion() {
-        int sum =0;
-        for(int i=0;i<size;i++){
-            if(obj[i].getStatus().equals("todo")){
-                sum+=obj[i].getTimeToComplete();
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            if (obj[i].getStatus().equals("todo")) {
+                sum += obj[i].getTimeToComplete();
             }
         }
         return sum;

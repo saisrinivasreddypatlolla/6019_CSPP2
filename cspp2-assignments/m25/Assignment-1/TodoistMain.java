@@ -198,9 +198,11 @@ class Todoist {
        String str="";
        int i;
        for(i=0;i<obj.length-1;i++){
-        str+=obj[i].toString()+"\n";
+        str+=obj[i].getTitle()+", "+obj[i].getAssignedTo()+", "+obj[i].getTimeToComplete()
+        +obj[i].getImportant()+", "+obj[i].getUrgent()+", "+obj[i].getStatus()+"\n";
        }
-       return str+obj[i].toString();
+       return str+obj[i].getTitle()+", "+obj[i].getAssignedTo()+", "+obj[i].getTimeToComplete()
+        +obj[i].getImportant()+", "+obj[i].getUrgent()+", "+obj[i].getStatus();
     }
 
 

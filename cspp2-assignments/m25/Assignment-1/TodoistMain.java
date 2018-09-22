@@ -221,7 +221,7 @@ class Todoist {
                     if (obj[j].getStatus().equals("todo")) {
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Not Urgent"))) {
-                            tasks[i] = obj[j];
+                            // tasks[i] = obj[j];
                             flag = 1;
                         }
                     }
@@ -232,7 +232,7 @@ class Todoist {
                     if (obj[j].getStatus().equals("todo")) {
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Urgent"))) {
-                            tasks[i] = obj[j];
+                            // tasks[i] = obj[j];
                             flag = 1;
                         }
                     }

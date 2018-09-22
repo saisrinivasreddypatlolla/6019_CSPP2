@@ -26,11 +26,11 @@ public class TodoistMain {
                 testAddTask(todo, tokens);
                 break;
             case "print-todoist":
-                System.out.println(todo.toString());
+                System.out.println(todo);
                 break;
-            // case "get-next":
-            //     System.out.println(todo.getNextTask(tokens[1]));
-            //     break;
+            case "get-next":
+                System.out.println(todo.getNextTask(tokens[1]));
+                break;
             // case "get-next-n":
             //     int n = Integer.parseInt(tokens[2]);
             //     Task[] tasks = todo.getNextTask(tokens[1], n);
@@ -192,9 +192,46 @@ class Todoist {
     private void resize() {
         obj = Arrays.copyOf(obj, 2 * obj.length);
     }
-    // public Task getNextTask(String s) {
+    public Task getNextTask(String s) {
+        for (int i = 0; i < size; i++) {
+            // System.out.println(obj[i]+"  "+obj[i].getStatus());
+            if (s.equals(obj[i].getAssignedTo())) {
+                // System.out.println(obj[i].getStatus());
+                if (obj[i].getStatus().equals("todo")) {
+                    // System.out.println(obj[i].getImportant()+" "+obj[i].getUrgent());
+                    if (obj[i].getImportant().equals("Important") && (
+                                obj[i].getUrgent().equals("Not Urgent"))) {
+                        // System.out.println("hello");
+                        return obj[i];
+                    }
+                    // } else if (obj[i].getImportant().equals("Important") && (
+                    //                obj[i].getUrgent().equals("Urgent"))) {
+                    //     return obj[i];
+                    // }
+                }
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            // System.out.println(obj[i]+"  "+obj[i].getStatus());
+            if (s.equals(obj[i].getAssignedTo())) {
+                // System.out.println(obj[i].getStatus());
+                if (obj[i].getStatus().equals("todo")) {
+                    // System.out.println(obj[i].getImportant()+" "+obj[i].getUrgent());
+                    // if (obj[i].getImportant().equals("Important") && (
+                    //             obj[i].getUrgent().equals("Not Urgent"))) {
+                    //     System.out.println("hello");
+                    //     return obj[i];
+                    if (obj[i].getImportant().equals("Important") && (
+                                   obj[i].getUrgent().equals("Urgent"))) {
+                        return obj[i];
+                    }
+                }
+            }
+        }
 
-    // }
+        return null;
+
+    }
     // public Task[] getNextTask(String s, int n) {
 
     // }
@@ -205,12 +242,12 @@ class Todoist {
     public String toString() {
         String str = "";
         int i;
-        for (i = 0; i < size-1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
-                   +", "+ obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus() + "\n";
+                   + ", " + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus() + "\n";
         }
         str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
-               + ", "+obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus();
+               + ", " + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus();
         return str;
     }
 

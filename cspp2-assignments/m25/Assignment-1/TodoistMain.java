@@ -205,12 +205,12 @@ class Todoist {
     public String toString() {
         String str = "";
         int i;
-        for (i = 0; i < size - 1; i++) {
+        for (i = 0; i < size-1; i++) {
             str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
-                   + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus() + "\n";
+                   +", "+ obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus() + "\n";
         }
         str += obj[i].getTitle() + ", " + obj[i].getAssignedTo() + ", " + obj[i].getTimeToComplete()
-               + obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus();
+               + ", "+obj[i].getImportant() + ", " + obj[i].getUrgent() + ", " + obj[i].getStatus();
         return str;
     }
 

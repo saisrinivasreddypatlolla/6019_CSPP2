@@ -266,7 +266,7 @@ class Todoist {
             for (int j = k; j < size; j++) {
                 if (s.equals(obj[j].getAssignedTo())) {
                     if (obj[j].getStatus().equals("todo")) {
-                        System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s + " " + obj[j]);
+                        // System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s + " " + obj[j]);
 
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Not Urgent"))) {
@@ -274,14 +274,14 @@ class Todoist {
                             flag = 1;
                             k = j + 1;
 
-                        }
-                    }
-                }
+                        
+                    
+                
             }
-            for (int j = k; j < size; j++) {
-                if (s.equals(obj[j].getAssignedTo())) {
-                    System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s);
-                    if (obj[j].getStatus().equals("todo")) {
+            // for (int j = k; j < size; j++) {
+                // if (s.equals(obj[j].getAssignedTo())) {
+                    // System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s);
+                    // if (obj[j].getStatus().equals("todo")) {
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Urgent"))) {
                             x = obj[j];

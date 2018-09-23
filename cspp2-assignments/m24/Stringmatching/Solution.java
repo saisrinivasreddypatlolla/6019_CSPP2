@@ -107,7 +107,7 @@ public final class Solution {
                 }
             }
         }
-        System.out.print("      \t");
+        System.out.print("\t");
         for (int i = 0; i < length - 1; i++) {
             System.out.print("\t" + fileList[i].getName());
         }

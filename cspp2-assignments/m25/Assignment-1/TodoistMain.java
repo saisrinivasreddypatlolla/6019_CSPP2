@@ -263,16 +263,14 @@ class Todoist {
         int count = 0, k = 0;
         tasks = new Task[3];
         for (int i = 0; i < n; i++) {
-            for (int j = k; j < size; j++) {
+            for (int j = 0; j < size; j++) {
                 if (s.equals(obj[j].getAssignedTo())) {
                     if (obj[j].getStatus().equals("todo")) {
                         // System.out.println((s.equals(obj[j].getAssignedTo())) + " " + s + " " + obj[j]);
 
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Not Urgent"))) {
-                            x = obj[j];
-                            flag = 1;
-                            k = j + 1;
+                            tasks[i] = obj[j];
 
                         
                     
@@ -284,9 +282,7 @@ class Todoist {
                     // if (obj[j].getStatus().equals("todo")) {
                         if (obj[j].getImportant().equals("Important") && (
                                     obj[j].getUrgent().equals("Urgent"))) {
-                            x = obj[j];
-                            flag = 1;
-                            k = j + 1;
+                            tasks[i]= obj[j];
                         }
                     }
                 }
@@ -296,14 +292,14 @@ class Todoist {
             //         flag1 = 1;
             //     }
             // }
-            if (flag == 1) {
-                tasks[i] = x;
-                count++;
-            } else {
-                tasks[i] = null;
+            // if (flag == 1) {
+            //     tasks[i] = x;
+            //     count++;
+            // } else {
+            //     tasks[i] = null;
 
-                System.out.println(Arrays.toString(tasks));
-            }
+            //     System.out.println(Arrays.toString(tasks));
+            // }
 
 
         }

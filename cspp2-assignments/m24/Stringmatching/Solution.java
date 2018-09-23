@@ -4,19 +4,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 
-// /**this class is to maintain.
-// *complete details of two files.
-// */
+/**this class is to maintain.
+*complete details of two files.
+*/
 class Data {
-    // /** this is an empty constructor.
-    // */
-    // Data() {
-    // }
-    // /**this method is to convert the.
-    // *file document text to string
-    // *@param file File
-    // *@return str returns string of that text.
-    // */
+    /** this is an empty constructor.
+    */
+    Data() {
+    }
+    /**this method is to convert the.
+    *file document text to string
+    *@param file File
+    *@return str returns string of that text.
+    */
     public static String toText(final File file) {
         String str = "";
         try {
@@ -33,12 +33,12 @@ class Data {
         }
         return str;
     }
-    // /**this method is to give the.
-    //  *document distance.
-    //  *@param textOne first file string
-    //  *@param textTwo second file string
-    //  *@return document distance
-    //  */
+    /**this method is to give the.
+     *document distance.
+     *@param textOne first file string
+     *@param textTwo second file string
+     *@return document distance
+     */
 
     public double stringMatching(final String textOne, final String textTwo) {
         int lengthOne = textOne.length();
@@ -66,19 +66,19 @@ class Data {
         return lcs;
     }
 }
-// /** this is the solution class.
-// */
+/** this is the solution class.
+*/
 public final class Solution {
-    // /** an empty constructor.
-    // */
+    /** an empty constructor.
+    */
     private Solution() {
 
     }
-    // /**
-    //  * this is main method.
-    //  *
-    //  * @param      args  The arguments
-    //  */
+    /**
+     * this is main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         try  {
         Scanner scan = new Scanner(System.in);
@@ -107,7 +107,7 @@ public final class Solution {
                 }
             }
         }
-        System.out.print("\t");
+        System.out.print("      \t");
         for (int i = 0; i < length - 1; i++) {
             System.out.print("\t" + fileList[i].getName());
         }

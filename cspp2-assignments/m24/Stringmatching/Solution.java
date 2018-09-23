@@ -116,7 +116,7 @@ public final class Solution {
             System.out.print(fileList[i].getName() + "\t");
             for (int j = 0; j < length; j++) {
                     System.out.print(
-                        String.format("\t"+"%.1f", fileMatrix[i][j]) + "\t\t");
+                        String.format("%.1f", fileMatrix[i][j]) + "\t\t");
             }
             System.out.println();
         }
